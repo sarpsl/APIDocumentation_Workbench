@@ -1,0 +1,1710 @@
+[
+  {
+    "documentation": "Returns the elements that are common to both of the given lists.",
+    "code": "def similar_elements(test_tup1, test_tup2):\n  res = tuple(set(test_tup1) & set(test_tup2))\n  return (res) "
+  },
+  {
+    "documentation": "Identifies and returns the non-prime numbers from the input.",
+    "code": "import math\ndef is_not_prime(n):\n    result = False\n    for i in range(2,int(math.sqrt(n)) + 1):\n        if n % i == 0:\n            result = True\n    return result"
+  },
+  {
+    "documentation": "Returns the n largest integers from the input list, sorted in descending order.",
+    "code": "import heapq as hq\ndef heap_queue_largest(nums,n):\n  largest_nums = hq.nlargest(n, nums)\n  return largest_nums"
+  },
+  {
+    "documentation": "Checks whether the two numbers differ at exactly one bit position.",
+    "code": "def is_Power_Of_Two (x): \n    return x and (not(x & (x - 1))) \ndef differ_At_One_Bit_Pos(a,b): \n    return is_Power_Of_Two(a ^ b)"
+  },
+  {
+    "documentation": "Returns all words with at least 4 characters from the given string.",
+    "code": "import re\ndef find_char_long(text):\n  return (re.findall(r\"\\b\\w{4,}\\b\", text))"
+  },
+  {
+    "documentation": "Returns a list of squares of the individual elements.",
+    "code": "def square_nums(nums):\n square_nums = list(map(lambda x: x ** 2, nums))\n return square_nums"
+  },
+  {
+    "documentation": "Returns the minimum number of rotations greater than 0 required to get the same string.",
+    "code": "def find_Rotations(str): \n    tmp = str + str\n    n = len(str) \n    for i in range(1,n + 1): \n        substring = tmp[i: i+n] \n        if (str == substring): \n            return i \n    return n "
+  },
+  {
+    "documentation": "Removes the first and last occurrence of a given character from the input string.",
+    "code": "def remove_Occ(s,ch): \n    for i in range(len(s)): \n        if (s[i] == ch): \n            s = s[0 : i] + s[i + 1:] \n            break\n    for i in range(len(s) - 1,-1,-1):  \n        if (s[i] == ch): \n            s = s[0 : i] + s[i + 1:] \n            break\n    return s "
+  },
+  {
+    "documentation": "Sorts the matrix in ascending order based on the sum of its rows.",
+    "code": "def sort_matrix(M):\n    result = sorted(M, key=sum)\n    return result"
+  },
+  {
+    "documentation": "Calculates and returns the volume of a triangular prism.",
+    "code": "def find_Volume(l,b,h) : \n    return ((l * b * h) / 2) "
+  },
+  {
+    "documentation": "Returns true if the string contains lowercase sequences joined with underscores, otherwise false.",
+    "code": "import re\ndef text_lowercase_underscore(text):\n        patterns = '^[a-z]+_[a-z]+$'\n        if re.search(patterns,  text):\n                return True\n        else:\n                return False"
+  },
+  {
+    "documentation": "Returns the perimeter of a square given its side length.",
+    "code": "def square_perimeter(a):\n  perimeter=4*a\n  return perimeter"
+  },
+  {
+    "documentation": "Removes characters from the first string that are present in the second string.",
+    "code": "NO_OF_CHARS = 256\ndef str_to_list(string): \n\ttemp = [] \n\tfor x in string: \n\t\ttemp.append(x) \n\treturn temp \ndef lst_to_string(List): \n\treturn ''.join(List) \ndef get_char_count_array(string): \n\tcount = [0] * NO_OF_CHARS \n\tfor i in string: \n\t\tcount[ord(i)] += 1\n\treturn count \ndef remove_dirty_chars(string, second_string): \n\tcount = get_char_count_array(second_string) \n\tip_ind = 0\n\tres_ind = 0\n\ttemp = '' \n\tstr_list = str_to_list(string) \n\twhile ip_ind != len(str_list): \n\t\ttemp = str_list[ip_ind] \n\t\tif count[ord(temp)] == 0: \n\t\t\tstr_list[res_ind] = str_list[ip_ind] \n\t\t\tres_ind += 1\n\t\tip_ind+=1\n\treturn lst_to_string(str_list[0:res_ind]) "
+  },
+  {
+    "documentation": "Returns true if the array contains any duplicate elements, otherwise false.",
+    "code": "def test_duplicate(arraynums):\n    nums_set = set(arraynums)    \n    return len(arraynums) != len(nums_set)     "
+  },
+  {
+    "documentation": "Checks if the number is a woodball number.",
+    "code": "def is_woodall(x): \n\tif (x % 2 == 0): \n\t\treturn False\n\tif (x == 1): \n\t\treturn True\n\tx = x + 1 \n\tp = 0\n\twhile (x % 2 == 0): \n\t\tx = x/2\n\t\tp = p + 1\n\t\tif (p == x): \n\t\t\treturn True\n\treturn False"
+  },
+  {
+    "documentation": "Checks whether a number is one less than twice its reverse.",
+    "code": "def rev(num):    \n    rev_num = 0\n    while (num > 0):  \n        rev_num = (rev_num * 10 + num % 10) \n        num = num // 10  \n    return rev_num  \ndef check(n):    \n    return (2 * rev(n) == n + 1)  "
+  },
+  {
+    "documentation": "Returns the largest number that can be formed using the given digits.",
+    "code": "def find_Max_Num(arr) : \n    n = len(arr)\n    arr.sort(reverse = True) \n    num = arr[0] \n    for i in range(1,n) : \n        num = num * 10 + arr[i] \n    return num "
+  },
+  {
+    "documentation": "Checks whether the two integers have opposite signs.",
+    "code": "def opposite_Signs(x,y): \n    return ((x ^ y) < 0); "
+  },
+  {
+    "documentation": "Returns the nth octagonal number.",
+    "code": "def is_octagonal(n): \n\treturn 3 * n * n - 2 * n "
+  },
+  {
+    "documentation": "Counts the number of substrings whose digits sum to their length.",
+    "code": "from collections import defaultdict\ndef count_Substrings(s):\n    n = len(s)\n    count,sum = 0,0\n    mp = defaultdict(lambda : 0)\n    mp[0] += 1\n    for i in range(n):\n        sum += ord(s[i]) - ord('0')\n        count += mp[sum - (i + 1)]\n        mp[sum - (i + 1)] += 1\n    return count"
+  },
+  {
+    "documentation": "Returns the smallest number in the list.",
+    "code": "def smallest_num(xs):\n  return min(xs)\n"
+  },
+  {
+    "documentation": "Returns the maximum difference among all pairs in the tuple list.",
+    "code": "def max_difference(test_list):\n  temp = [abs(b - a) for a, b in test_list]\n  res = max(temp)\n  return (res) "
+  },
+  {
+    "documentation": "Sorts the list of tuples using the second value in each tuple.",
+    "code": "def subject_marks(subjectmarks):\n#subject_marks = [('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)])\n subjectmarks.sort(key = lambda x: x[1])\n return subjectmarks"
+  },
+  {
+    "documentation": "Flattens a list and returns the sum of all its elements.",
+    "code": "def recursive_list_sum(data_list):\n\ttotal = 0\n\tfor element in data_list:\n\t\tif type(element) == type([]):\n\t\t\ttotal = total + recursive_list_sum(element)\n\t\telse:\n\t\t\ttotal = total + element\n\treturn total"
+  },
+  {
+    "documentation": "Counts the number of positive numbers in the list.",
+    "code": "def pos_count(list):\n  pos_count= 0\n  for num in list: \n    if num >= 0: \n      pos_count += 1\n  return pos_count "
+  },
+  {
+    "documentation": "Returns the number of ways to partition a set using Bell numbers.",
+    "code": "def bell_number(n):   \n    bell = [[0 for i in range(n+1)] for j in range(n+1)] \n    bell[0][0] = 1\n    for i in range(1, n+1): \n        bell[i][0] = bell[i-1][i-1]  \n        for j in range(1, i+1): \n            bell[i][j] = bell[i-1][j-1] + bell[i][j-1]   \n    return bell[n][0] "
+  },
+  {
+    "documentation": "Checks whether the array is monotonic.",
+    "code": "def is_Monotonic(A): \n    return (all(A[i] <= A[i + 1] for i in range(len(A) - 1)) or\n            all(A[i] >= A[i + 1] for i in range(len(A) - 1))) "
+  },
+  {
+    "documentation": "Checks whether the list contains the given sublist.",
+    "code": "def is_sublist(l, s):\n\tsub_set = False\n\tif s == []:\n\t\tsub_set = True\n\telif s == l:\n\t\tsub_set = True\n\telif len(s) > len(l):\n\t\tsub_set = False\n\telse:\n\t\tfor i in range(len(l)):\n\t\t\tif l[i] == s[0]:\n\t\t\t\tn = 1\n\t\t\t\twhile (n < len(s)) and (l[i+n] == s[n]):\n\t\t\t\t\tn += 1\t\t\t\t\n\t\t\t\tif n == len(s):\n\t\t\t\t\tsub_set = True\n\treturn sub_set"
+  },
+  {
+    "documentation": "Checks whether all tuples in the list have equal length.",
+    "code": "def find_equal_tuple(Input):\n  k = 0 if not Input else len(Input[0])\n  flag = 1\n  for tuple in Input:\n    if len(tuple) != k:\n      flag = 0\n      break\n  return flag\ndef get_equal(Input):\n  return find_equal_tuple(Input) == 1"
+  },
+  {
+    "documentation": "Returns the list sorted in ascending order.",
+    "code": "def comb_sort(nums):\n    shrink_fact = 1.3\n    gaps = len(nums)\n    swapped = True\n    i = 0\n    while gaps > 1 or swapped:\n        gaps = int(float(gaps) / shrink_fact)\n        swapped = False\n        i = 0\n        while gaps + i < len(nums):\n            if nums[i] > nums[i+gaps]:\n                nums[i], nums[i+gaps] = nums[i+gaps], nums[i]\n                swapped = True\n            i += 1\n    return nums"
+  },
+  {
+    "documentation": "Checks if the number can be expressed as the difference of two squares.",
+    "code": "def dif_Square(n): \n    if (n % 4 != 2): \n        return True\n    return False"
+  },
+  {
+    "documentation": "Checks if a sequence follows the given pattern.",
+    "code": "def is_samepatterns(colors, patterns):    \n    if len(colors) != len(patterns):\n        return False    \n    sdict = {}\n    pset = set()\n    sset = set()    \n    for i in range(len(patterns)):\n        pset.add(patterns[i])\n        sset.add(colors[i])\n        if patterns[i] not in sdict.keys():\n            sdict[patterns[i]] = []\n\n        keys = sdict[patterns[i]]\n        keys.append(colors[i])\n        sdict[patterns[i]] = keys\n\n    if len(pset) != len(sset):\n        return False   \n\n    for values in sdict.values():\n\n        for i in range(len(values) - 1):\n            if values[i] != values[i+1]:\n                return False\n\n    return True"
+  },
+  {
+    "documentation": "Returns tuples where all elements are divisible by k.",
+    "code": "def find_tuples(test_list, K):\n  res = [sub for sub in test_list if all(ele % K == 0 for ele in sub)]\n  return res"
+  },
+  {
+    "documentation": "Checks if the number is divisible by 11.",
+    "code": "def is_Diff(n): \n    return (n % 11 == 0) "
+  },
+  {
+    "documentation": "Checks whether the word has odd length.",
+    "code": "def word_len(s): \n    s = s.split(' ')   \n    for word in s:    \n        if len(word)%2!=0: \n            return True  \n        else:\n          return False"
+  },
+  {
+    "documentation": "Returns the nth tetrahedral number.",
+    "code": "def tetrahedral_number(n): \n\treturn (n * (n + 1) * (n + 2)) / 6"
+  },
+  {
+    "documentation": "Calculates and returns the volume of a sphere.",
+    "code": "import math\ndef volume_sphere(r):\n  volume=(4/3)*math.pi*r*r*r\n  return volume"
+  },
+  {
+    "documentation": "Returns a character calculated by adding ASCII values modulo 26.",
+    "code": "def get_Char(strr):  \n    summ = 0\n    for i in range(len(strr)): \n        summ += (ord(strr[i]) - ord('a') + 1)  \n    if (summ % 26 == 0): \n        return ord('z') \n    else: \n        summ = summ % 26\n        return chr(ord('a') + summ - 1)"
+  },
+  {
+    "documentation": "Returns the nth number in the Newman–Conway sequence.",
+    "code": "def sequence(n): \n\tif n == 1 or n == 2: \n\t\treturn 1\n\telse: \n\t\treturn sequence(sequence(n-1)) + sequence(n-sequence(n-1))"
+  },
+  {
+    "documentation": "Returns the surface area of a sphere.",
+    "code": "import math\ndef surfacearea_sphere(r):\n  surfacearea=4*math.pi*r*r\n  return surfacearea"
+  },
+  {
+    "documentation": "Returns the nth centered hexagonal number.",
+    "code": "def centered_hexagonal_number(n):\n  return 3 * n * (n - 1) + 1"
+  },
+  {
+    "documentation": "Merges three dictionaries into one.",
+    "code": "import collections as ct\ndef merge_dictionaries_three(dict1,dict2, dict3):\n    merged_dict = dict(ct.ChainMap({},dict1,dict2,dict3))\n    return merged_dict"
+  },
+  {
+    "documentation": "Returns a dictionary with the frequency of each element in the list.",
+    "code": "import collections\ndef freq_count(list1):\n  freq_count= collections.Counter(list1)\n  return freq_count"
+  },
+  {
+    "documentation": "Returns the closest number smaller than n.",
+    "code": "def closest_num(N):\n  return (N - 1)"
+  },
+  {
+    "documentation": "Returns the length of the longest word in the input.",
+    "code": "def len_log(list1):\n    max=len(list1[0])\n    for i in list1:\n        if len(i)>max:\n            max=len(i)\n    return max"
+  },
+  {
+    "documentation": "Checks whether a string appears as a substring in the list of strings.",
+    "code": "def find_substring(str1, sub_str):\n   if any(sub_str in s for s in str1):\n       return True\n   return False"
+  },
+  {
+    "documentation": "Checks whether a number is undulating.",
+    "code": "def is_undulating(n): \n\tn = str(n)\n\tif (len(n) <= 2): \n\t\treturn False\n\tfor i in range(2, len(n)): \n\t\tif (n[i - 2] != n[i]): \n\t\t\treturn False\n\treturn True"
+  },
+  {
+    "documentation": "Returns the value of ‘a’ raised to the power ‘b’.",
+    "code": "def power(a,b):\n\tif b==0:\n\t\treturn 1\n\telif a==0:\n\t\treturn 0\n\telif b==1:\n\t\treturn a\n\telse:\n\t\treturn a*power(a,b-1)"
+  },
+  {
+    "documentation": "Returns the first value of the tuple with the smallest second value.",
+    "code": "from operator import itemgetter \ndef index_minimum(test_list):\n  res = min(test_list, key = itemgetter(1))[0]\n  return (res) "
+  },
+  {
+    "documentation": "Returns the length of the smallest list in a list of lists.",
+    "code": "def Find_Min_Length(lst):  \n    minLength = min(len(x) for x in lst )\n    return minLength "
+  },
+  {
+    "documentation": "Returns the number of divisors of the given integer.",
+    "code": "def divisor(n):\n  for i in range(n):\n    x = len([i for i in range(1,n+1) if not n % i])\n  return x"
+  },
+  {
+    "documentation": "Returns a dictionary with frequency of each element in the flattened list.",
+    "code": "def frequency_lists(list1):\n    list1 = [item for sublist in list1 for item in sublist]\n    dic_data = {}\n    for num in list1:\n        if num in dic_data.keys():\n            dic_data[num] += 1\n        else:\n            key = num\n            value = 1\n            dic_data[key] = value\n    return dic_data\n"
+  },
+  {
+    "documentation": "Returns the result of multiplying all numbers and dividing by the length of the list.",
+    "code": "def multiply_num(numbers):  \n    total = 1\n    for x in numbers:\n        total *= x  \n    return total/len(numbers) "
+  },
+  {
+    "documentation": "Converts a decimal number to its binary string representation without leading zeros.",
+    "code": "def decimal_to_binary(n): \n    return bin(n).replace(\"0b\",\"\") "
+  },
+  {
+    "documentation": "Returns the next smallest palindrome greater than the input integer.",
+    "code": "import sys\ndef next_smallest_palindrome(num):\n    numstr = str(num)\n    for i in range(num+1,sys.maxsize):\n        if str(i) == str(i)[::-1]:\n            return i"
+  },
+  {
+    "documentation": "Returns the kth element from the array using 1-based indexing.",
+    "code": "def kth_element(arr, k):\n  n = len(arr)\n  for i in range(n):\n    for j in range(0, n-i-1):\n      if arr[j] > arr[j+1]:\n        arr[j], arr[j+1] == arr[j+1], arr[j]\n  return arr[k-1]"
+  },
+  {
+    "documentation": "Converts a snake\\_case string to camelCase.",
+    "code": "def snake_to_camel(word):\n        import re\n        return ''.join(x.capitalize() or '_' for x in word.split('_'))"
+  },
+  {
+    "documentation": "Returns the Eulerian number a(n, m).",
+    "code": "def eulerian_num(n, m): \n\tif (m >= n or n == 0): \n\t\treturn 0 \n\tif (m == 0): \n\t\treturn 1 \n\treturn ((n - m) * eulerian_num(n - 1, m - 1) +(m + 1) * eulerian_num(n - 1, m))"
+  },
+  {
+    "documentation": "Sorts each sublist of strings in the list of lists.",
+    "code": "def sort_sublists(input_list):\n    result = [sorted(x, key = lambda x:x[0]) for x in input_list] \n    return result\n"
+  },
+  {
+    "documentation": "Counts the number of `True` values in the list.",
+    "code": "def count(lst):   \n    return sum(lst) "
+  },
+  {
+    "documentation": "Appends the given list to each of the given tuples.",
+    "code": "def add_lists(test_list, test_tup):\n  res = tuple(list(test_tup) + test_list)\n  return (res) "
+  },
+  {
+    "documentation": "Merges three lists into a single sorted list.",
+    "code": "import heapq\ndef merge_sorted_list(num1,num2,num3):\n  num1=sorted(num1)\n  num2=sorted(num2)\n  num3=sorted(num3)\n  result = heapq.merge(num1,num2,num3)\n  return list(result)"
+  },
+  {
+    "documentation": "Counts how many times rotation of a binary string yields an odd value.",
+    "code": "def odd_Equivalent(s,n): \n    count=0\n    for i in range(0,n): \n        if (s[i] == '1'): \n            count = count + 1\n    return count "
+  },
+  {
+    "documentation": "Finds the common elements in the nested lists.",
+    "code": "def common_in_nested_lists(nestedlist):\n    result = list(set.intersection(*map(set, nestedlist)))\n    return result"
+  },
+  {
+    "documentation": "Checks whether a string represents an integer.",
+    "code": "def check_integer(text):\n text = text.strip()\n if len(text) < 1:\n    return None\n else:\n     if all(text[i] in \"0123456789\" for i in range(len(text))):\n          return True\n     elif (text[0] in \"+-\") and \\\n         all(text[i] in \"0123456789\" for i in range(1,len(text))):\n         return True\n     else:\n        return False"
+  },
+  {
+    "documentation": "Checks whether all dictionaries in a list are empty.",
+    "code": "def empty_dit(list1):\n empty_dit=all(not d for d in list1)\n return empty_dit"
+  },
+  {
+    "documentation": "Converts a tuple of positive integers into a single integer.",
+    "code": "def tuple_to_int(nums):\n    result = int(''.join(map(str,nums)))\n    return result"
+  },
+  {
+    "documentation": "Converts all convertible elements in a list of lists to floats.",
+    "code": "def list_to_float(test_list):\n  res = []\n  for tup in test_list:\n    temp = []\n    for ele in tup:\n      if ele.isalpha():\n        temp.append(ele)\n      else:\n        temp.append(float(ele))\n    res.append((temp[0],temp[1])) \n  return res"
+  },
+  {
+    "documentation": "Converts a string into a list split by spaces.",
+    "code": "def string_to_list(string): \n    lst = list(string.split(\" \")) \n    return lst"
+  },
+  {
+    "documentation": "Finds the element that appears only once in a sorted array.",
+    "code": "def search(arr):\n    n = len(arr)\n    XOR = 0\n    for i in range(n) :\n        XOR = XOR ^ arr[i]\n    return (XOR)"
+  },
+  {
+    "documentation": "Returns the maximum absolute product from pairs of tuples in the list.",
+    "code": "def max_product_tuple(list1):\n    result_max = max([abs(x * y) for x, y in list1] )\n    return result_max"
+  },
+  {
+    "documentation": "Returns the sum of all amicable numbers up to the specified limit.",
+    "code": "def amicable_numbers_sum(limit):\n    if not isinstance(limit, int):\n        return \"Input is not an integer!\"\n    if limit < 1:\n        return \"Input must be bigger than 0!\"\n    amicables = set()\n    for num in range(2, limit+1):\n        if num in amicables:\n            continue\n        sum_fact = sum([fact for fact in range(1, num) if num % fact == 0])\n        sum_fact2 = sum([fact for fact in range(1, sum_fact) if sum_fact % fact == 0])\n        if num == sum_fact2 and num != sum_fact:\n            amicables.add(num)\n            amicables.add(sum_fact2)\n    return sum(amicables)"
+  },
+  {
+    "documentation": "Returns the angle of the complex number.",
+    "code": "import cmath\ndef angle_complex(a,b):\n  cn=complex(a,b)\n  angle=cmath.phase(a+b)\n  return angle"
+  },
+  {
+    "documentation": "Finds the maximum difference between 0s and 1s in any substring.",
+    "code": "def find_length(string): \n\tn = len(string)\n\tcurrent_sum = 0\n\tmax_sum = 0\n\tfor i in range(n): \n\t\tcurrent_sum += (1 if string[i] == '0' else -1) \n\t\tif current_sum < 0: \n\t\t\tcurrent_sum = 0\n\t\tmax_sum = max(current_sum, max_sum) \n\treturn max_sum if max_sum else 0"
+  },
+  {
+    "documentation": "Returns the sum of all common divisors of two numbers.",
+    "code": "def sum(a,b): \n    sum = 0\n    for i in range (1,min(a,b)): \n        if (a % i == 0 and b % i == 0): \n            sum += i \n    return sum"
+  },
+  {
+    "documentation": "Multiplies the two integers and returns the result.",
+    "code": "def multiply_int(x, y):\n    if y < 0:\n        return -multiply_int(x, -y)\n    elif y == 0:\n        return 0\n    elif y == 1:\n        return x\n    else:\n        return x + multiply_int(x, y - 1)"
+  },
+  {
+    "documentation": "Returns words longer than n characters from the list.",
+    "code": "def long_words(n, str):\n    word_len = []\n    txt = str.split(\" \")\n    for x in txt:\n        if len(x) > n:\n            word_len.append(x)\n    return word_len\t"
+  },
+  {
+    "documentation": "Checks whether the matrix is a magic square.",
+    "code": "def magic_square_test(my_matrix):\n    iSize = len(my_matrix[0])\n    sum_list = []\n    sum_list.extend([sum (lines) for lines in my_matrix])   \n    for col in range(iSize):\n        sum_list.append(sum(row[col] for row in my_matrix))\n    result1 = 0\n    for i in range(0,iSize):\n        result1 +=my_matrix[i][i]\n    sum_list.append(result1)      \n    result2 = 0\n    for i in range(iSize-1,-1,-1):\n        result2 +=my_matrix[i][i]\n    sum_list.append(result2)\n    if len(set(sum_list))>1:\n        return False\n    return True"
+  },
+  {
+    "documentation": "Returns the item with maximum frequency in the list.",
+    "code": "from collections import defaultdict\ndef max_occurrences(nums):\n    dict = defaultdict(int)\n    for i in nums:\n        dict[i] += 1\n    result = max(dict.items(), key=lambda x: x[1]) \n    return result[0]"
+  },
+  {
+    "documentation": "Reverses only the vowels in the string.",
+    "code": "def reverse_vowels(str1):\n\tvowels = \"\"\n\tfor char in str1:\n\t\tif char in \"aeiouAEIOU\":\n\t\t\tvowels += char\n\tresult_string = \"\"\n\tfor char in str1:\n\t\tif char in \"aeiouAEIOU\":\n\t\t\tresult_string += vowels[-1]\n\t\t\tvowels = vowels[:-1]\n\t\telse:\n\t\t\tresult_string += char\n\treturn result_string"
+  },
+  {
+    "documentation": "Converts a tuple to a string.",
+    "code": "def tup_string(tup1):\n  str =  ''.join(tup1)\n  return str"
+  },
+  {
+    "documentation": "Returns the sum of all negative numbers in the list.",
+    "code": "def sum_negativenum(nums):\n  sum_negativenum = list(filter(lambda nums:nums<0,nums))\n  return sum(sum_negativenum)"
+  },
+  {
+    "documentation": "Returns the nth hexagonal number.",
+    "code": "def hexagonal_num(n): \n\treturn n*(2*n - 1) "
+  },
+  {
+    "documentation": "Returns the ratio of zeroes to non-zeroes in the list.",
+    "code": "from array import array\ndef zero_count(nums):\n    n = len(nums)\n    n1 = 0\n    for x in nums:\n        if x == 0:\n            n1 += 1\n        else:\n          None\n    return n1/(n-n1)"
+  },
+  {
+    "documentation": "Checks whether a number can be represented as sum of non-zero powers of 2.",
+    "code": "def is_Sum_Of_Powers_Of_Two(n): \n    if (n % 2 == 1): \n        return False\n    else: \n        return True"
+  },
+  {
+    "documentation": "Returns the circumference of a circle.",
+    "code": "def circle_circumference(r):\n  perimeter=2*3.1415*r\n  return perimeter"
+  },
+  {
+    "documentation": "Flattens a nested list into a single set of numbers.",
+    "code": "def extract_singly(test_list):\n  res = []\n  temp = set()\n  for inner in test_list:\n    for ele in inner:\n      if not ele in temp:\n        temp.add(ele)\n        res.append(ele)\n  return (res) "
+  },
+  {
+    "documentation": "Returns the list sorted in ascending order.",
+    "code": "def pancake_sort(nums):\n    arr_len = len(nums)\n    while arr_len > 1:\n        mi = nums.index(max(nums[0:arr_len]))\n        nums = nums[mi::-1] + nums[mi+1:len(nums)]\n        nums = nums[arr_len-1::-1] + nums[arr_len:len(nums)]\n        arr_len -= 1\n    return nums"
+  },
+  {
+    "documentation": "Counts the number of identical items at the same positions across three lists.",
+    "code": "def count_samepair(list1,list2,list3):\n    result = sum(m == n == o for m, n, o in zip(list1,list2,list3))\n    return result"
+  },
+  {
+    "documentation": "Returns the number of lists present inside the given tuple.",
+    "code": "def find_lists(Input): \n\tif isinstance(Input, list): \n\t\treturn 1\n\telse: \n\t\treturn len(Input) "
+  },
+  {
+    "documentation": "Finds the maximum difference between any two elements in the array.",
+    "code": "def max_Abs_Diff(arr): \n    n = len(arr)\n    minEle = arr[0] \n    maxEle = arr[0] \n    for i in range(1, n): \n        minEle = min(minEle,arr[i]) \n        maxEle = max(maxEle,arr[i]) \n    return (maxEle - minEle) "
+  },
+  {
+    "documentation": "Returns integers x and y satisfying ax + by = n, or None if not possible.",
+    "code": "def find_solution(a, b, n):\n\ti = 0\n\twhile i * a <= n:\n\t\tif (n - (i * a)) % b == 0: \n\t\t\treturn (i, (n - (i * a)) // b)\n\t\ti = i + 1\n\treturn None"
+  },
+  {
+    "documentation": "Removes all elements from one list that are present in another.",
+    "code": "def remove_elements(list1, list2):\n    result = [x for x in list1 if x not in list2]\n    return result"
+  },
+  {
+    "documentation": "Returns the computed sum of the series (n - 2\\*i) until the result is non-positive.",
+    "code": "def sum_series(n):\n  if n < 1:\n    return 0\n  else:\n    return n + sum_series(n - 2)"
+  },
+  {
+    "documentation": "Calculates the area of a regular polygon given side length and number of sides.",
+    "code": "from math import tan, pi\ndef area_polygon(s, l):\n  area = s * (l ** 2) / (4 * tan(pi / s))\n  return area"
+  },
+  {
+    "documentation": "Checks whether the sum of divisors of two numbers are equal.",
+    "code": "import math \ndef div_sum(n): \n  total = 1\n  i = 2\n\n  while i * i <= n:\n    if (n % i == 0):\n      total = (total + i + math.floor(n / i))\n    i += 1\n\n  return total\n\ndef are_equivalent(num1, num2): \n    return div_sum(num1) == div_sum(num2); "
+  },
+  {
+    "documentation": "Counts the characters that match their position in the English alphabet.",
+    "code": "def count_char_position(str1): \n    count_chars = 0\n    for i in range(len(str1)):\n        if ((i == ord(str1[i]) - ord('A')) or \n            (i == ord(str1[i]) - ord('a'))): \n            count_chars += 1\n    return count_chars "
+  },
+  {
+    "documentation": "Counts the number of integer pairs whose XOR result is even.",
+    "code": "def find_even_pair(A): \n  count = 0\n  for i in range(0, len(A)): \n    for j in range(i+1, len(A)): \n        if ((A[i] ^ A[j]) % 2 == 0): \n          count += 1\n\n  return count"
+  },
+  {
+    "documentation": "Returns the smallest power of 2 greater than or equal to n.",
+    "code": "def next_power_of_2(n): \n  if n and not n & (n - 1):\n    return n\n\n  count = 0\n  while n != 0: \n    n >>= 1\n    count += 1\n\n  return 1 << count; "
+  },
+  {
+    "documentation": "Counts how many times a number occurs in the list.",
+    "code": "def frequency(a,x): \n    count = 0  \n    for i in a: \n      if i == x: \n        count += 1\n\n    return count "
+  },
+  {
+    "documentation": "Returns the sum of numbers in the list within the specified index range.",
+    "code": "def sum_range_list(list1, m, n):                                                                                                                                                                                                \n    sum_range = 0                                                                                                                                                                                                         \n    for i in range(m, n+1, 1):                                                                                                                                                                                        \n        sum_range += list1[i]                                                                                                                                                                                                  \n    return sum_range   "
+  },
+  {
+    "documentation": "Returns the perimeter of a regular pentagon given the length of its sides.",
+    "code": "import math\ndef perimeter_pentagon(a):\n  perimeter=(5*a)\n  return perimeter"
+  },
+  {
+    "documentation": "Counts the occurrences of the string 'std' in the given string.",
+    "code": "def count_occurance(s):\n  count = 0\n  for i in range(len(s) - 2):\n    if (s[i] == 's' and s[i+1] == 't' and s[i+2] == 'd'):\n      count = count + 1\n  return count"
+  },
+  {
+    "documentation": "Checks whether all elements in the tuple have the same data type.",
+    "code": "def check_type(test_tuple):\n  res = True\n  for ele in test_tuple:\n    if not isinstance(ele, type(test_tuple[0])):\n      res = False\n      break\n  return (res) "
+  },
+  {
+    "documentation": "Checks if the given element appears more than n/2 times in the sorted array.",
+    "code": "def is_majority(arr, n, x):\n\ti = binary_search(arr, 0, n-1, x)\n\tif i == -1:\n\t\treturn False\n\tif ((i + n//2) <= (n -1)) and arr[i + n//2] == x:\n\t\treturn True\n\telse:\n\t\treturn False\ndef binary_search(arr, low, high, x):\n\tif high >= low:\n\t\tmid = (low + high)//2 \n\t\tif (mid == 0 or x > arr[mid-1]) and (arr[mid] == x):\n\t\t\treturn mid\n\t\telif x > arr[mid]:\n\t\t\treturn binary_search(arr, (mid + 1), high, x)\n\t\telse:\n\t\t\treturn binary_search(arr, low, (mid -1), x)\n\treturn -1"
+  },
+  {
+    "documentation": "Counts the number of set bits in the given number.",
+    "code": "def count_Set_Bits(n): \n    count = 0\n    while (n): \n        count += n & 1\n        n >>= 1\n    return count "
+  },
+  {
+    "documentation": "Removes characters at odd indices from the given string.",
+    "code": "def odd_values_string(str):\n  result = \"\" \n  for i in range(len(str)):\n    if i % 2 == 0:\n      result = result + str[i]\n  return result"
+  },
+  {
+    "documentation": "Returns the minimum among three given numbers.",
+    "code": "def min_of_three(a,b,c): \n      if (a <= b) and (a <= c): \n        smallest = a \n      elif (b <= a) and (b <= c): \n        smallest = b \n      else: \n        smallest = c \n      return smallest "
+  },
+  {
+    "documentation": "Checks if all bits are unset in the specified range.",
+    "code": "def all_Bits_Set_In_The_Given_Range(n,l,r):  \n    num = (((1 << r) - 1) ^ ((1 << (l - 1)) - 1)) \n    new_num = n & num\n    if (new_num == 0): \n        return True\n    return False"
+  },
+  {
+    "documentation": "Rearranges the first n elements of the array to place negatives before positives while preserving order.",
+    "code": "def re_arrange_array(arr, n):\n  j=0\n  for i in range(0, n):\n    if (arr[i] < 0):\n      temp = arr[i]\n      arr[i] = arr[j]\n      arr[j] = temp\n      j = j + 1\n  return arr"
+  },
+  {
+    "documentation": "Replaces spaces in the string with the specified character.",
+    "code": "def replace_blank(str1,char):\n str2 = str1.replace(' ', char)\n return str2"
+  },
+  {
+    "documentation": "Returns the n largest items from the list.",
+    "code": "import heapq\ndef larg_nnum(list1,n):\n largest=heapq.nlargest(n,list1)\n return largest"
+  },
+  {
+    "documentation": "Returns the lateral surface area of a cylinder.",
+    "code": "def lateralsuface_cylinder(r,h):\n  lateralsurface= 2*3.1415*r*h\n  return lateralsurface"
+  },
+  {
+    "documentation": "Returns the volume of a cube from its side length.",
+    "code": "def volume_cube(l):\n  volume = l * l * l\n  return volume"
+  },
+  {
+    "documentation": "Sets all even bits of the given number.",
+    "code": "def even_bit_set_number(n): \n    count = 0;res = 0;temp = n \n    while(temp > 0): \n        if (count % 2 == 1): \n            res |= (1 << count)\n        count+=1\n        temp >>= 1\n    return (n | res) "
+  },
+  {
+    "documentation": "Returns a dictionary with the count of each unique tuple in the list.",
+    "code": "from collections import Counter \ndef check_occurences(test_list):\n  res = dict(Counter(tuple(ele) for ele in map(sorted, test_list)))\n  return  (res) "
+  },
+  {
+    "documentation": "Counts all non-empty substrings of the given string.",
+    "code": "def number_of_substrings(str): \n\tstr_len = len(str); \n\treturn int(str_len * (str_len + 1) / 2); "
+  },
+  {
+    "documentation": "Returns the number of valid sequences of length n under the specified conditions.",
+    "code": "def get_total_number_of_sequences(m,n): \n\tT=[[0 for i in range(n+1)] for i in range(m+1)] \n\tfor i in range(m+1): \n\t\tfor j in range(n+1): \n\t\t\tif i==0 or j==0: \n\t\t\t\tT[i][j]=0\n\t\t\telif i<j: \n\t\t\t\tT[i][j]=0\n\t\t\telif j==1: \n\t\t\t\tT[i][j]=i \n\t\t\telse: \n\t\t\t\tT[i][j]=T[i-1][j]+T[i//2][j-1] \n\treturn T[m][n]"
+  },
+  {
+    "documentation": "Replaces the last element of the first list with the contents of the second list.",
+    "code": "def replace_list(list1,list2):\n list1[-1:] = list2\n replace_list=list1\n return replace_list\n"
+  },
+  {
+    "documentation": "Returns the total number of characters in the string.",
+    "code": "def count_charac(str1):\n total = 0\n for i in str1:\n    total = total + 1\n return total"
+  },
+  {
+    "documentation": "Returns the next perfect square greater than the given number.",
+    "code": "import math  \ndef next_Perfect_Square(N): \n    nextN = math.floor(math.sqrt(N)) + 1\n    return nextN * nextN "
+  },
+  {
+    "documentation": "Returns the maximum sum of a bitonic subsequence in the array.",
+    "code": "def max_sum(arr): \n\tMSIBS = arr[:] \n\tfor i in range(len(arr)): \n\t\tfor j in range(0, i): \n\t\t\tif arr[i] > arr[j] and MSIBS[i] < MSIBS[j] + arr[i]: \n\t\t\t\tMSIBS[i] = MSIBS[j] + arr[i] \n\tMSDBS = arr[:] \n\tfor i in range(1, len(arr) + 1): \n\t\tfor j in range(1, i): \n\t\t\tif arr[-i] > arr[-j] and MSDBS[-i] < MSDBS[-j] + arr[-i]: \n\t\t\t\tMSDBS[-i] = MSDBS[-j] + arr[-i] \n\tmax_sum = float(\"-Inf\") \n\tfor i, j, k in zip(MSIBS, MSDBS, arr): \n\t\tmax_sum = max(max_sum, i + j - k) \n\treturn max_sum"
+  },
+  {
+    "documentation": "Computes the square root using the Babylonian method.",
+    "code": "def babylonian_squareroot(number):\n    if(number == 0):\n        return 0;\n    g = number/2.0;\n    g2 = g + 1;\n    while(g != g2):\n        n = number/ g;\n        g2 = g;\n        g = (g + n)/2;\n    return g;"
+  },
+  {
+    "documentation": "Returns the length of the longest palindromic subsequence.",
+    "code": "def lps(str): \n\tn = len(str) \n\tL = [[0 for x in range(n)] for x in range(n)] \n\tfor i in range(n): \n\t\tL[i][i] = 1\n\tfor cl in range(2, n+1): \n\t\tfor i in range(n-cl+1): \n\t\t\tj = i+cl-1\n\t\t\tif str[i] == str[j] and cl == 2: \n\t\t\t\tL[i][j] = 2\n\t\t\telif str[i] == str[j]: \n\t\t\t\tL[i][j] = L[i+1][j-1] + 2\n\t\t\telse: \n\t\t\t\tL[i][j] = max(L[i][j-1], L[i+1][j]); \n\treturn L[0][n-1]"
+  },
+  {
+    "documentation": "Returns the harmonic sum of n - 1.",
+    "code": "def harmonic_sum(n):\n  if n < 2:\n    return 1\n  else:\n    return 1 / n + (harmonic_sum(n - 1)) "
+  },
+  {
+    "documentation": "Returns the intersection of two arrays.",
+    "code": "def intersection_array(array_nums1,array_nums2):\n result = list(filter(lambda x: x in array_nums1, array_nums2)) \n return result"
+  },
+  {
+    "documentation": "Counts the occurrences of the element in the tuple.",
+    "code": "def count_X(tup, x): \n    count = 0\n    for ele in tup: \n        if (ele == x): \n            count = count + 1\n    return count "
+  },
+  {
+    "documentation": "Inserts the given element before each element in the list.",
+    "code": "def insert_element(list,element):\n list = [v for elt in list for v in (element, elt)]\n return list"
+  },
+  {
+    "documentation": "Converts complex numbers to polar coordinates.",
+    "code": "import cmath  \ndef convert(numbers):    \n  num = cmath.polar(numbers)  \n  return (num) "
+  },
+  {
+    "documentation": "Returns the count of integer elements in the list.",
+    "code": "def count_integer(list1):\n    ctr = 0\n    for i in list1:\n        if isinstance(i, int):\n            ctr = ctr + 1\n    return ctr"
+  },
+  {
+    "documentation": "Generates all length-n combinations with repetition from the list.",
+    "code": "from itertools import combinations_with_replacement \ndef combinations_colors(l, n):\n    return list(combinations_with_replacement(l,n))\n"
+  },
+  {
+    "documentation": "Returns the count of primes less than the given number.",
+    "code": "def count_Primes_nums(n):\n    ctr = 0\n    for num in range(n):\n        if num <= 1:\n            continue\n        for i in range(2,num):\n            if (num % i) == 0:\n                break\n        else:\n            ctr += 1\n    return ctr"
+  },
+  {
+    "documentation": "Returns a tuple with the second and first number.",
+    "code": "def swap_numbers(a,b):\n temp = a\n a = b\n b = temp\n return (a,b)"
+  },
+  {
+    "documentation": "Returns the element-wise maximum of two tuples.",
+    "code": "def maximize_elements(test_tup1, test_tup2):\n  res = tuple(tuple(max(a, b) for a, b in zip(tup1, tup2))\n   for tup1, tup2 in zip(test_tup1, test_tup2))\n  return (res) "
+  },
+  {
+    "documentation": "Returns the nth Newman–Shanks–Williams prime number.",
+    "code": "def newman_prime(n): \n\tif n == 0 or n == 1: \n\t\treturn 1\n\treturn 2 * newman_prime(n - 1) + newman_prime(n - 2)"
+  },
+  {
+    "documentation": "Divides elements of the first tuple by the corresponding elements of the second tuple.",
+    "code": "def division_elements(test_tup1, test_tup2):\n  res = tuple(ele1 // ele2 for ele1, ele2 in zip(test_tup1, test_tup2))\n  return (res) "
+  },
+  {
+    "documentation": "Splits the list into two parts, the first with length L, and returns both parts as a tuple.",
+    "code": "def split_two_parts(list1, L):\n    return list1[:L], list1[L:]"
+  },
+  {
+    "documentation": "Converts dog age in human years to dog years.",
+    "code": "def dog_age(h_age):\n if h_age < 0:\n \texit()\n elif h_age <= 2:\n\t d_age = h_age * 10.5\n else:\n\t d_age = 21 + (h_age - 2)*4\n return d_age"
+  },
+  {
+    "documentation": "Splits the list into parts at every nth element.",
+    "code": "def list_split(S, step):\n    return [S[i::step] for i in range(step)]"
+  },
+  {
+    "documentation": "Returns the lateral surface area of a cube from its side length.",
+    "code": "def lateralsurface_cube(l):\n  LSA = 4 * (l * l)\n  return LSA"
+  },
+  {
+    "documentation": "Returns the sum of squares of the first n odd natural numbers.",
+    "code": "def square_Sum(n):  \n    return int(n*(4*n*n-1)/3) "
+  },
+  {
+    "documentation": "Returns the nth star number.",
+    "code": "def find_star_num(n): \n\treturn (6 * n * (n - 1) + 1) "
+  },
+  {
+    "documentation": "Returns the ASCII value of the character.",
+    "code": "def ascii_value(k):\n  ch=k\n  return ord(ch)"
+  },
+  {
+    "documentation": "Returns the sum of even numbers at even indices in the list.",
+    "code": "def sum_even_and_even_index(arr):  \n    i = 0\n    sum = 0\n    for i in range(0, len(arr),2): \n        if (arr[i] % 2 == 0) : \n            sum += arr[i]  \n    return sum"
+  },
+  {
+    "documentation": "Returns the sum of the fifth powers of the first n even natural numbers.",
+    "code": "def even_Power_Sum(n): \n    sum = 0; \n    for i in range(1,n+1): \n        j = 2*i; \n        sum = sum + (j*j*j*j*j); \n    return sum; "
+  },
+  {
+    "documentation": "Returns a list containing the last element of each tuple.",
+    "code": "def rear_extract(test_list):\n  res = [lis[-1] for lis in test_list]\n  return (res) "
+  },
+  {
+    "documentation": "Subtracts elements of the second tuple from the first tuple index-wise.",
+    "code": "def substract_elements(test_tup1, test_tup2):\n  res = tuple(map(lambda i, j: i - j, test_tup1, test_tup2))\n  return (res) "
+  },
+  {
+    "documentation": "Returns the sum of binomial coefficients at even indices for the given n.",
+    "code": "import math  \ndef even_binomial_Coeff_Sum( n): \n    return (1 << (n - 1)) "
+  },
+  {
+    "documentation": "Returns the volume of a cylinder using its radius and height.",
+    "code": "def volume_cylinder(r,h):\n  volume=3.1415*r*r*h\n  return volume"
+  },
+  {
+    "documentation": "Filters the dictionary to include only entries with values ≥ n.",
+    "code": "def dict_filter(dict,n):\n result = {key:value for (key, value) in dict.items() if value >=n}\n return result"
+  },
+  {
+    "documentation": "Returns the count of elements before the specified tuple in the tuple.",
+    "code": "def count_first_elements(test_tup):\n  for count, ele in enumerate(test_tup):\n    if isinstance(ele, tuple):\n      break\n  return (count) "
+  },
+  {
+    "documentation": "Returns the nth decagonal number.",
+    "code": "def is_num_decagonal(n): \n\treturn 4 * n * n - 3 * n "
+  },
+  {
+    "documentation": "Checks whether the element exists in the array and returns its index or -1.",
+    "code": "def sequential_search(dlist, item):\n    pos = 0\n    found = False\n    while pos < len(dlist) and not found:\n        if dlist[pos] == item:\n            found = True\n        else:\n            pos = pos + 1\n    return found, pos"
+  },
+  {
+    "documentation": "Checks whether all elements in the list are unique.",
+    "code": "def all_unique(test_list):\n    if len(test_list) > len(set(test_list)):\n        return False\n    return True"
+  },
+  {
+    "documentation": "Performs element-wise subtraction between two lists.",
+    "code": "def sub_list(nums1,nums2):\n  result = map(lambda x, y: x - y, nums1, nums2)\n  return list(result)"
+  },
+  {
+    "documentation": "Checks if each digit's frequency in the number is less than or equal to the digit itself.",
+    "code": "def validate(n): \n    for i in range(10): \n        temp = n;  \n        count = 0; \n        while (temp): \n            if (temp % 10 == i): \n                count+=1;  \n            if (count > i): \n                return False\n            temp //= 10; \n    return True"
+  },
+  {
+    "documentation": "Checks whether all items in the list match the given element.",
+    "code": "def check_element(list,element):\n  check_element=all(v== element for v in list)\n  return check_element"
+  },
+  {
+    "documentation": "Checks if the string has an 'a' followed by two or three 'b's.",
+    "code": "import re\ndef text_match_two_three(text):\n        patterns = 'ab{2,3}'\n        if re.search(patterns,  text):\n                return True\n        else:\n                return False"
+  },
+  {
+    "documentation": "Returns the largest sum of a contiguous subarray from the array repeated k times.",
+    "code": "def max_sub_array_sum_repeated(a, n, k): \n\tmax_so_far = -2147483648\n\tmax_ending_here = 0\n\tfor i in range(n*k): \n\t\tmax_ending_here = max_ending_here + a[i%n] \n\t\tif (max_so_far < max_ending_here): \n\t\t\tmax_so_far = max_ending_here \n\t\tif (max_ending_here < 0): \n\t\t\tmax_ending_here = 0\n\treturn max_so_far"
+  },
+  {
+    "documentation": "Returns the sum of squares of the first n even natural numbers.",
+    "code": "def square_Sum(n):  \n    return int(2*n*(n+1)*(2*n+1)/3)"
+  },
+  {
+    "documentation": "Returns the list of maximum length from a list of lists.",
+    "code": "def max_length(list1):\n    max_length = max(len(x) for x in  list1 )  \n    max_list = max((x) for x in   list1)\n    return(max_length, max_list)"
+  },
+  {
+    "documentation": "Returns the number of ways to paint the fence such that no more than 2 adjacent posts have the same color.",
+    "code": "def count_no_of_ways(n, k): \n\tdp = [0] * (n + 1) \n\ttotal = k \n\tmod = 1000000007\n\tdp[1] = k \n\tdp[2] = k * k\t \n\tfor i in range(3,n+1): \n\t\tdp[i] = ((k - 1) * (dp[i - 1] + dp[i - 2])) % mod \n\treturn dp[n]"
+  },
+  {
+    "documentation": "Returns the floor division result of two numbers.",
+    "code": "def find(n,m):  \n    q = n//m \n    return (q)"
+  },
+  {
+    "documentation": "Returns the third side of a right triangle using the Pythagorean theorem.",
+    "code": "import math\ndef otherside_rightangle(w,h):\n  s=math.sqrt((w*w)+(h*h))\n  return s"
+  },
+  {
+    "documentation": "Returns the maximum value in the heterogeneous list.",
+    "code": "def max_val(listval):\n     max_val = max(i for i in listval if isinstance(i, int)) \n     return(max_val)"
+  },
+  {
+    "documentation": "Returns the sum of all divisors of the given number.",
+    "code": "def sum_div(number):\n    divisors = [1]\n    for i in range(2, number):\n        if (number % i)==0:\n            divisors.append(i)\n    return sum(divisors)"
+  },
+  {
+    "documentation": "Counts the number of inversions in the array.",
+    "code": "def get_Inv_Count(arr): \n    inv_count = 0\n    for i in range(len(arr)): \n        for j in range(i + 1, len(arr)): \n            if (arr[i] > arr[j]): \n                inv_count += 1\n    return inv_count "
+  },
+  {
+    "documentation": "Flattens a nested list into a single list.",
+    "code": "def flatten_list(list1):\n    result_list = []\n    if not list1: return result_list\n    stack = [list(list1)]\n    while stack:\n        c_num = stack.pop()\n        next = c_num.pop()\n        if c_num: stack.append(c_num)\n        if isinstance(next, list):\n            if next: stack.append(list(next))\n        else: result_list.append(next)\n    result_list.reverse()\n    return result_list "
+  },
+  {
+    "documentation": "Calculates the maximum aggregate value from the list of tuples.",
+    "code": "from collections import defaultdict\ndef max_aggregate(stdata):\n    temp = defaultdict(int)\n    for name, marks in stdata:\n        temp[name] += marks\n    return max(temp.items(), key=lambda x: x[1])"
+  },
+  {
+    "documentation": "Returns the count of binary sequences of length 2n where first and last n bits have equal sum.",
+    "code": "def count_binary_seq(n): \n\tnCr = 1\n\tres = 1\n\tfor r in range(1, n + 1): \n\t\tnCr = (nCr * (n + 1 - r)) / r \n\t\tres += nCr * nCr \n\treturn res "
+  },
+  {
+    "documentation": "Returns the depth (nesting level) of a dictionary.",
+    "code": "def dict_depth(d):\n    if isinstance(d, dict):\n        return 1 + (max(map(dict_depth, d.values())) if d else 0)\n    return 0"
+  },
+  {
+    "documentation": "Returns the element at the specified index after applying the given number of rotations.",
+    "code": "def find_Element(arr,ranges,rotations,index) :  \n    for i in range(rotations - 1,-1,-1 ) : \n        left = ranges[i][0] \n        right = ranges[i][1] \n        if (left <= index and right >= index) : \n            if (index == left) : \n                index = right \n            else : \n                index = index - 1 \n    return arr[index] "
+  },
+  {
+    "documentation": "Returns two words from the list that start with 'p'.",
+    "code": "import re\ndef start_withp(words):\n for w in words:\n        m = re.match(\"(P\\w+)\\W(P\\w+)\", w)\n        if m:\n            return m.groups()"
+  },
+  {
+    "documentation": "Returns the maximum increasing subsequence sum until i including element at index k > i.",
+    "code": "def max_sum_increasing_subseq(a, n, index, k):\n\tdp = [[0 for i in range(n)] \n\t\t\tfor i in range(n)]\n\tfor i in range(n):\n\t\tif a[i] > a[0]:\n\t\t\tdp[0][i] = a[i] + a[0]\n\t\telse:\n\t\t\tdp[0][i] = a[i]\n\tfor i in range(1, n):\n\t\tfor j in range(n):\n\t\t\tif a[j] > a[i] and j > i:\n\t\t\t\tif dp[i - 1][i] + a[j] > dp[i - 1][j]:\n\t\t\t\t\tdp[i][j] = dp[i - 1][i] + a[j]\n\t\t\t\telse:\n\t\t\t\t\tdp[i][j] = dp[i - 1][j]\n\t\t\telse:\n\t\t\t\tdp[i][j] = dp[i - 1][j]\n\treturn dp[index][k]"
+  },
+  {
+    "documentation": "Returns a colon-separated string from the tuple.",
+    "code": "from copy import deepcopy\ndef colon_tuplex(tuplex,m,n):\n  tuplex_colon = deepcopy(tuplex)\n  tuplex_colon[m].append(n)\n  return tuplex_colon"
+  },
+  {
+    "documentation": "Returns the specified number of largest products from pairs of elements from two lists.",
+    "code": "def large_product(nums1, nums2, N):\n    result = sorted([x*y for x in nums1 for y in nums2], reverse=True)[:N]\n    return result"
+  },
+  {
+    "documentation": "Returns the maximum of two given numbers.",
+    "code": "def maximum(a,b):   \n    if a >= b: \n        return a \n    else: \n        return b "
+  },
+  {
+    "documentation": "Converts the string to a tuple of characters.",
+    "code": "def string_to_tuple(str1):\n    result = tuple(x for x in str1 if not x.isspace()) \n    return result"
+  },
+  {
+    "documentation": "Sets the leftmost unset bit in the binary representation of the number.",
+    "code": "def set_left_most_unset_bit(n): \n    if not (n & (n + 1)): \n        return n \n    pos, temp, count = 0, n, 0 \n    while temp: \n        if not (temp & 1): \n            pos = count      \n        count += 1; temp>>=1\n    return (n | (1 << (pos))) "
+  },
+  {
+    "documentation": "Returns the volume of a cone using its radius and height.",
+    "code": "import math\ndef volume_cone(r,h):\n  volume = (1.0/3) * math.pi * r * r * h\n  return volume"
+  },
+  {
+    "documentation": "Returns the highest power of 2 less than or equal to n.",
+    "code": "def highest_Power_of_2(n): \n    res = 0 \n    for i in range(n, 0, -1): \n        if ((i & (i - 1)) == 0): \n            res = i \n            break \n    return res "
+  },
+  {
+    "documentation": "Returns the nth Lucas number.",
+    "code": "def find_lucas(n): \n\tif (n == 0): \n\t\treturn 2\n\tif (n == 1): \n\t\treturn 1\n\treturn find_lucas(n - 1) + find_lucas(n - 2) "
+  },
+  {
+    "documentation": "Applies the format string to every element in the list.",
+    "code": "def add_string(list_, string):\n add_string=[string.format(i) for i in  list_]\n return add_string"
+  },
+  {
+    "documentation": "Converts multiple lists into a nested dictionary structure.",
+    "code": "def convert_list_dictionary(l1, l2, l3):\n     result = [{x: {y: z}} for (x, y, z) in zip(l1, l2, l3)]\n     return result"
+  },
+  {
+    "documentation": "Returns the maximum sum by computing f(n) = max(f(n/2)+f(n/3)+f(n/4)+f(n/5), n).",
+    "code": "def get_max_sum (n):\n\tres = list()\n\tres.append(0)\n\tres.append(1)\n\ti = 2\n\twhile i<n + 1:\n\t\tres.append(max(i, (res[int(i / 2)] \n\t\t\t\t\t\t+ res[int(i / 3)] +\n\t\t\t\t\t\t\tres[int(i / 4)]\n\t\t\t\t\t\t+ res[int(i / 5)])))\n\t\ti = i + 1\n\treturn res[n]"
+  },
+  {
+    "documentation": "Returns the list with the maximum length from the list of lists.",
+    "code": "def max_length_list(input_list):\n    max_length = max(len(x) for x in input_list )   \n    max_list = max(input_list, key = lambda i: len(i))    \n    return(max_length, max_list)"
+  },
+  {
+    "documentation": "Checks whether the tuple has no duplicate elements.",
+    "code": "def check_distinct(test_tup):\n  res = True\n  temp = set()\n  for ele in test_tup:\n    if ele in temp:\n      res = False\n      break\n    temp.add(ele)\n  return res "
+  },
+  {
+    "documentation": "Returns the first non-repeated character in the string.",
+    "code": "def first_non_repeating_character(str1):\n  char_order = []\n  ctr = {}\n  for c in str1:\n    if c in ctr:\n      ctr[c] += 1\n    else:\n      ctr[c] = 1 \n      char_order.append(c)\n  for c in char_order:\n    if ctr[c] == 1:\n      return c\n  return None"
+  },
+  {
+    "documentation": "Checks if the string starts and ends with the same character.",
+    "code": "import re  \nregex = r'^[a-z]$|^([a-z]).*\\1$'\ndef check_char(string): \n\tif(re.search(regex, string)): \n\t\treturn \"Valid\" \n\telse: \n\t\treturn \"Invalid\" "
+  },
+  {
+    "documentation": "Returns the median of three numbers.",
+    "code": "def median_numbers(a,b,c):\n if a > b:\n    if a < c:\n        median = a\n    elif b > c:\n        median = b\n    else:\n        median = c\n else:\n    if a > c:\n        median = a\n    elif b < c:\n        median = b\n    else:\n        median = c\n return median"
+  },
+  {
+    "documentation": "Returns the sum of digits of each number in the list.",
+    "code": "def sum_of_digits(nums):\n    return sum(int(el) for n in nums for el in str(n) if el.isdigit())"
+  },
+  {
+    "documentation": "Performs bitwise XOR on corresponding elements of the tuples.",
+    "code": "def bitwise_xor(test_tup1, test_tup2):\n  res = tuple(ele1 ^ ele2 for ele1, ele2 in zip(test_tup1, test_tup2))\n  return (res) "
+  },
+  {
+    "documentation": "Returns the number of unique tuples in the list.",
+    "code": "def extract_freq(test_list):\n  res = len(list(set(tuple(sorted(sub)) for sub in test_list)))\n  return (res)"
+  },
+  {
+    "documentation": "Adds the tuple elements index-wise across two nested tuples.",
+    "code": "def add_nested_tuples(test_tup1, test_tup2):\n  res = tuple(tuple(a + b for a, b in zip(tup1, tup2))\n   for tup1, tup2 in zip(test_tup1, test_tup2))\n  return (res) "
+  },
+  {
+    "documentation": "Returns the minimum of two given numbers.",
+    "code": "def minimum(a,b):   \n    if a <= b: \n        return a \n    else: \n        return b "
+  },
+  {
+    "documentation": "Checks whether the element exists in the tuple.",
+    "code": "def check_tuplex(tuplex,tuple1): \n  if tuple1 in tuplex:\n    return True\n  else:\n     return False"
+  },
+  {
+    "documentation": "Checks whether the given number has odd parity.",
+    "code": "def find_Parity(x): \n    y = x ^ (x >> 1); \n    y = y ^ (y >> 2); \n    y = y ^ (y >> 4); \n    y = y ^ (y >> 8); \n    y = y ^ (y >> 16); \n    if (y & 1): \n        return True\n    return False"
+  },
+  {
+    "documentation": "Returns the next bigger number formed by rearranging its digits.",
+    "code": "def rearrange_bigger(n):\n    nums = list(str(n))\n    for i in range(len(nums)-2,-1,-1):\n        if nums[i] < nums[i+1]:\n            z = nums[i:]\n            y = min(filter(lambda x: x > z[0], z))\n            z.remove(y)\n            z.sort()\n            nums[i:] = [y] + z\n            return int(\"\".join(nums))\n    return False"
+  },
+  {
+    "documentation": "Returns k smallest pairs from two arrays, each pair consisting of one element from each.",
+    "code": "import heapq\ndef k_smallest_pairs(nums1, nums2, k):\n   queue = []\n   def push(i, j):\n       if i < len(nums1) and j < len(nums2):\n           heapq.heappush(queue, [nums1[i] + nums2[j], i, j])\n   push(0, 0)\n   pairs = []\n   while queue and len(pairs) < k:\n       _, i, j = heapq.heappop(queue)\n       pairs.append([nums1[i], nums2[j]])\n       push(i, j + 1)\n       if j == 0:\n           push(i + 1, 0)\n   return pairs"
+  },
+  {
+    "documentation": "Returns the minimum product among all pairs of tuples in the list.",
+    "code": "def min_product_tuple(list1):\n    result_min = min([abs(x * y) for x, y in list1] )\n    return result_min"
+  },
+  {
+    "documentation": "Returns the minimum value in the given heterogeneous list.",
+    "code": "def min_val(listval):\n     min_val = min(i for i in listval if isinstance(i, int))\n     return min_val"
+  },
+  {
+    "documentation": "Converts the given snake\\_case string to camelCase.",
+    "code": "import re\ndef snake_to_camel(word):\n  return ''.join(x.capitalize() or '_' for x in word.split('_'))"
+  },
+  {
+    "documentation": "Removes all odd numbers from the given list.",
+    "code": "def remove_odd(l):\n    for i in l:\n        if i % 2 != 0:\n            l.remove(i)\n    return l"
+  },
+  {
+    "documentation": "Extracts the nth element from each tuple in the list.",
+    "code": "def extract_nth_element(list1, n):\n    result = [x[n] for x in list1]\n    return result"
+  },
+  {
+    "documentation": "Checks whether any value in the sequence exists or not.",
+    "code": "def overlapping(list1,list2):  \n    for i in range(len(list1)): \n        for j in range(len(list2)): \n            if(list1[i]==list2[j]): \n                return True\n    return False"
+  },
+  {
+    "documentation": "Returns the pair of numbers with the highest product from the array.",
+    "code": "def max_Product(arr): \n    arr_len = len(arr) \n    if (arr_len < 2): \n        return (\"No pairs exists\")           \n    x = arr[0]; y = arr[1]      \n    for i in range(0,arr_len): \n        for j in range(i + 1,arr_len): \n            if (arr[i] * arr[j] > x * y): \n                x = arr[i]; y = arr[j] \n    return x,y    "
+  },
+  {
+    "documentation": "Returns the common first element among the tuples in the list.",
+    "code": "def group_tuples(Input): \n\tout = {} \n\tfor elem in Input: \n\t\ttry: \n\t\t\tout[elem[0]].extend(elem[1:]) \n\t\texcept KeyError: \n\t\t\tout[elem[0]] = list(elem) \n\treturn [tuple(values) for values in out.values()] "
+  },
+  {
+    "documentation": "Returns the element with maximum length from the list.",
+    "code": "def Find_Max(lst): \n    maxList = max((x) for x in lst) \n    return maxList"
+  },
+  {
+    "documentation": "Rounds each number, sums them, and multiplies the result by the list length.",
+    "code": "def round_and_sum(list1):\n  lenght=len(list1)\n  round_and_sum=sum(list(map(round,list1))* lenght)\n  return round_and_sum"
+  },
+  {
+    "documentation": "Returns the sum of cubes of the first n even natural numbers.",
+    "code": "def cube_Sum(n): \n    sum = 0\n    for i in range(1,n + 1): \n        sum += (2*i)*(2*i)*(2*i) \n    return sum"
+  },
+  {
+    "documentation": "Concatenates each tuple element using the given delimiter.",
+    "code": "def concatenate_tuple(test_tup):\n    delim = \"-\"\n    res = ''.join([str(ele) + delim for ele in test_tup])\n    res = res[ : len(res) - len(delim)]\n    return (str(res)) "
+  },
+  {
+    "documentation": "Returns the average of cubes of the first n natural numbers.",
+    "code": "def find_Average_Of_Cube(n):  \n    sum = 0\n    for i in range(1, n + 1): \n        sum += i * i * i  \n    return round(sum / n, 6) "
+  },
+  {
+    "documentation": "Extracts the last character of each string in the tuple.",
+    "code": "def extract_rear(test_tuple):\n  res = list(sub[len(sub) - 1] for sub in test_tuple)\n  return (res) "
+  },
+  {
+    "documentation": "Counts the number of sublists containing the specified element.",
+    "code": "def count_element_in_list(list1, x): \n    ctr = 0\n    for i in range(len(list1)): \n        if x in list1[i]: \n            ctr+= 1          \n    return ctr"
+  },
+  {
+    "documentation": "Filters and returns only the odd numbers.",
+    "code": "def filter_oddnumbers(nums):\n odd_nums = list(filter(lambda x: x%2 != 0, nums))\n return odd_nums"
+  },
+  {
+    "documentation": "Converts a date from yyyy-mm-dd format to dd-mm-yyyy format.",
+    "code": "import re\ndef change_date_format(dt):\n        return re.sub(r'(\\d{4})-(\\d{1,2})-(\\d{1,2})', '\\\\3-\\\\2-\\\\1', dt)"
+  },
+  {
+    "documentation": "Sorts the given array using the shell sort algorithm.",
+    "code": "def shell_sort(my_list):\n    gap = len(my_list) // 2\n    while gap > 0:\n        for i in range(gap, len(my_list)):\n            current_item = my_list[i]\n            j = i\n            while j >= gap and my_list[j - gap] > current_item:\n                my_list[j] = my_list[j - gap]\n                j -= gap\n            my_list[j] = current_item\n        gap //= 2\n\n    return my_list"
+  },
+  {
+    "documentation": "Returns element-wise logical AND of the two given tuples.",
+    "code": "def and_tuples(test_tup1, test_tup2):\n  res = tuple(ele1 & ele2 for ele1, ele2 in zip(test_tup1, test_tup2))\n  return (res) "
+  },
+  {
+    "documentation": "Returns the directrix of a parabola.",
+    "code": "def parabola_directrix(a, b, c): \n  directrix=((int)(c - ((b * b) + 1) * 4 * a ))\n  return directrix"
+  },
+  {
+    "documentation": "Checks whether the two lists have at least one common element.",
+    "code": "def common_element(list1, list2):\n     result = False\n     for x in list1:\n         for y in list2:\n             if x == y:\n                 result = True\n                 return result"
+  },
+  {
+    "documentation": "Returns the median of the lengths of the parallel sides of the trapezium.",
+    "code": "def median_trapezium(base1,base2,height):\n median = 0.5 * (base1+ base2)\n return median"
+  },
+  {
+    "documentation": "Checks whether the number is greater than all elements in the array.",
+    "code": "def check_greater(arr, number):\n  arr.sort()\n  return number > arr[-1]"
+  },
+  {
+    "documentation": "Returns true if the string contains an 'a' followed by one or more 'b's.",
+    "code": "import re\ndef text_match_one(text):\n        patterns = 'ab+?'\n        if re.search(patterns,  text):\n                return True\n        else:\n                return False\n"
+  },
+  {
+    "documentation": "Returns the last digit of the given number.",
+    "code": "def last_Digit(n) :\n    return (n % 10) "
+  },
+  {
+    "documentation": "Returns all negative numbers in the given list.",
+    "code": "def neg_nos(list1):\n  out = []\n  for num in list1: \n    if num < 0: \n      out.append(num)\n  return out "
+  },
+  {
+    "documentation": "Removes characters at odd indices from the string.",
+    "code": "def remove_odd(str1):\n str2 = ''\n for i in range(1, len(str1) + 1):\n    if(i % 2 == 0):\n        str2 = str2 + str1[i - 1]\n return str2"
+  },
+  {
+    "documentation": "Counts the number of bidirectional tuple pairs in the list.",
+    "code": "def count_bidirectional(test_list):\n  res = 0\n  for idx in range(0, len(test_list)):\n    for iidx in range(idx + 1, len(test_list)):\n      if test_list[iidx][0] == test_list[idx][1] and test_list[idx][1] == test_list[iidx][0]:\n        res += 1\n  return res"
+  },
+  {
+    "documentation": "Joins the list of integers into a single integer.",
+    "code": "def multiple_to_single(L):\n  x = int(\"\".join(map(str, L)))\n  return x"
+  },
+  {
+    "documentation": "Finds the first adverb and its position in the sentence.",
+    "code": "import re\ndef find_adverb_position(text):\n for m in re.finditer(r\"\\w+ly\", text):\n    return (m.start(), m.end(), m.group(0))"
+  },
+  {
+    "documentation": "Returns the surface area of a cube given its side length.",
+    "code": "def surfacearea_cube(l):\n  surfacearea= 6*l*l\n  return surfacearea"
+  },
+  {
+    "documentation": "Returns the ratio of positive numbers in the array.",
+    "code": "from array import array\ndef positive_count(nums):\n    n = len(nums)\n    n1 = 0\n    for x in nums:\n        if x > 0:\n            n1 += 1\n        else:\n          None\n    return round(n1/n,2)"
+  },
+  {
+    "documentation": "Returns the largest negative number from the list.",
+    "code": "def largest_neg(list1): \n    max = list1[0] \n    for x in list1: \n        if x < max : \n             max = x  \n    return max"
+  },
+  {
+    "documentation": "Trims each tuple in the list by k elements.",
+    "code": "def trim_tuple(test_list, K):\n  res = []\n  for ele in test_list:\n    N = len(ele)\n    res.append(tuple(list(ele)[K: N - K]))\n  return (str(res)) "
+  },
+  {
+    "documentation": "Returns the element-wise multiplication of two tuples.",
+    "code": "def index_multiplication(test_tup1, test_tup2):\n  res = tuple(tuple(a * b for a, b in zip(tup1, tup2))\n   for tup1, tup2 in zip(test_tup1, test_tup2))\n  return (res) "
+  },
+  {
+    "documentation": "Counts how many times each element of the list occurs in the tuple.",
+    "code": "from collections import Counter \ndef count_Occurrence(tup, lst): \n    count = 0\n    for item in tup: \n        if item in lst: \n            count+= 1 \n    return count  "
+  },
+  {
+    "documentation": "Returns the cubes of each element in the list.",
+    "code": "def cube_nums(nums):\n cube_nums = list(map(lambda x: x ** 3, nums))\n return cube_nums"
+  },
+  {
+    "documentation": "Returns the sum of Perrin numbers.",
+    "code": "def cal_sum(n): \n\ta = 3\n\tb = 0\n\tc = 2\n\tif (n == 0): \n\t\treturn 3\n\tif (n == 1): \n\t\treturn 3\n\tif (n == 2): \n\t\treturn 5\n\tsum = 5\n\twhile (n > 2): \n\t\td = a + b \n\t\tsum = sum + d \n\t\ta = b \n\t\tb = c \n\t\tc = d \n\t\tn = n-1\n\treturn sum"
+  },
+  {
+    "documentation": "Extracts strings of the specified size from the list.",
+    "code": "def extract_string(str, l):\n    result = [e for e in str if len(e) == l] \n    return result"
+  },
+  {
+    "documentation": "Removes all whitespaces from the string.",
+    "code": "import re\ndef remove_whitespaces(text1):\n  return (re.sub(r'\\s+', '',text1))"
+  },
+  {
+    "documentation": "Returns the loss amount if there is a loss, otherwise 0.",
+    "code": "def loss_amount(actual_cost,sale_amount): \n  if(sale_amount > actual_cost):\n    amount = sale_amount - actual_cost\n    return amount\n  else:\n    return 0"
+  },
+  {
+    "documentation": "Returns the sum of even factors of the given number.",
+    "code": "import math \ndef sumofFactors(n) : \n    if (n % 2 != 0) : \n        return 0\n    res = 1\n    for i in range(2, (int)(math.sqrt(n)) + 1) :    \n        count = 0\n        curr_sum = 1\n        curr_term = 1\n        while (n % i == 0) : \n            count= count + 1\n            n = n // i \n            if (i == 2 and count == 1) : \n                curr_sum = 0\n            curr_term = curr_term * i \n            curr_sum = curr_sum + curr_term \n        res = res * curr_sum  \n    if (n >= 2) : \n        res = res * (1 + n) \n    return res"
+  },
+  {
+    "documentation": "Returns true if the word contains the character 'z'.",
+    "code": "import re\ndef text_match_wordz(text):\n        patterns = '\\w*z.\\w*'\n        if re.search(patterns,  text):\n                return True\n        else:\n                return False"
+  },
+  {
+    "documentation": "Checks whether the given month has 31 days.",
+    "code": "def check_monthnumb_number(monthnum2):\n  if(monthnum2==1 or monthnum2==3 or monthnum2==5 or monthnum2==7 or monthnum2==8 or monthnum2==10 or monthnum2==12):\n    return True\n  else:\n    return False"
+  },
+  {
+    "documentation": "Reverses each string in the list.",
+    "code": "def reverse_string_list(stringlist):\n    result = [x[::-1] for x in stringlist]\n    return result"
+  },
+  {
+    "documentation": "Returns the sublist with the minimum length.",
+    "code": "def Find_Min(lst): \n    return min(lst, key=len) "
+  },
+  {
+    "documentation": "Returns the area of a rectangle.",
+    "code": "def rectangle_area(l,b):\n  area=l*b\n  return area"
+  },
+  {
+    "documentation": "Removes all uppercase substrings from the string.",
+    "code": "import re\ndef remove_uppercase(str1):\n  return re.sub('[A-Z]', '', str1)"
+  },
+  {
+    "documentation": "Returns the first element of each sublist.",
+    "code": "def Extract(lst): \n    return [item[0] for item in lst] "
+  },
+  {
+    "documentation": "Counts uppercase characters in the string.",
+    "code": "def upper_ctr(str):\n    upper_ctr = 0\n    for i in range(len(str)):\n          if str[i] >= 'A' and str[i] <= 'Z': upper_ctr += 1\n          return upper_ctr"
+  },
+  {
+    "documentation": "Returns all combinations of the list elements.",
+    "code": "def combinations_list(list1):\n    if len(list1) == 0:\n        return [[]]\n    result = []\n    for el in combinations_list(list1[1:]):\n        result += [el, el+[list1[0]]]\n    return result"
+  },
+  {
+    "documentation": "Returns the maximum product subarray.",
+    "code": "def max_subarray_product(arr):\n\tn = len(arr)\n\tmax_ending_here = 1\n\tmin_ending_here = 1\n\tmax_so_far = 0\n\tflag = 0\n\tfor i in range(0, n):\n\t\tif arr[i] > 0:\n\t\t\tmax_ending_here = max_ending_here * arr[i]\n\t\t\tmin_ending_here = min (min_ending_here * arr[i], 1)\n\t\t\tflag = 1\n\t\telif arr[i] == 0:\n\t\t\tmax_ending_here = 1\n\t\t\tmin_ending_here = 1\n\t\telse:\n\t\t\ttemp = max_ending_here\n\t\t\tmax_ending_here = max (min_ending_here * arr[i], 1)\n\t\t\tmin_ending_here = temp * arr[i]\n\t\tif (max_so_far < max_ending_here):\n\t\t\tmax_so_far = max_ending_here\n\tif flag == 0 and max_so_far == 0:\n\t\treturn 0\n\treturn max_so_far"
+  },
+  {
+    "documentation": "Returns true if all dictionary values are the same.",
+    "code": "def check_value(dict, n):\n    result = all(x == n for x in dict.values()) \n    return result"
+  },
+  {
+    "documentation": "Removes all empty items from the dictionary.",
+    "code": "def drop_empty(dict1):\n  dict1 = {key:value for (key, value) in dict1.items() if value is not None}\n  return dict1"
+  },
+  {
+    "documentation": "Returns the maximum product of numbers in an increasing subsequence.",
+    "code": "def max_product(arr):   \n  n = len(arr)\n  mpis = arr[:]\n  for i in range(n): \n    current_prod = arr[i]\n    j = i + 1\n    while j < n:\n      if arr[j-1] > arr[j]: \n        break\n      current_prod *= arr[j]\n      if current_prod > mpis[j]:\n        mpis[j] = current_prod \n      j = j + 1\n  return max(mpis)"
+  },
+  {
+    "documentation": "Returns the pairwise addition of neighboring tuple elements.",
+    "code": "def add_pairwise(test_tup):\n  res = tuple(i + j for i, j in zip(test_tup, test_tup[1:]))\n  return (res) "
+  },
+  {
+    "documentation": "Returns the product of array elements modulo n.",
+    "code": "def find_remainder(arr, n): \n    mul = 1\n    for i in range(len(arr)):  \n        mul = (mul * (arr[i] % n)) % n \n    return mul % n "
+  },
+  {
+    "documentation": "Checks whether the list contains consecutive numbers.",
+    "code": "def check_Consecutive(l): \n    return sorted(l) == list(range(min(l),max(l)+1)) "
+  },
+  {
+    "documentation": "Returns the intersection of all tuples, regardless of order.",
+    "code": "def tuple_intersection(test_list1, test_list2):\n  res = set([tuple(sorted(ele)) for ele in test_list1]) & set([tuple(sorted(ele)) for ele in test_list2])\n  return (res)"
+  },
+  {
+    "documentation": "Replaces specified characters in a string.",
+    "code": "def replace_char(str1,ch,newch):\n str2 = str1.replace(ch, newch)\n return str2"
+  },
+  {
+    "documentation": "Sorts the dictionary by its values.",
+    "code": "from collections import Counter\ndef sort_counter(dict1):\n x = Counter(dict1)\n sort_counter=x.most_common()\n return sort_counter"
+  },
+  {
+    "documentation": "Returns the sum of the largest and smallest values in the array.",
+    "code": "def big_sum(nums):\n      sum= max(nums)+min(nums)\n      return sum"
+  },
+  {
+    "documentation": "Converts the string to lowercase.",
+    "code": "def is_lower(string):\n  return (string.lower())"
+  },
+  {
+    "documentation": "Removes all lowercase substrings from the string.",
+    "code": "import re\ndef remove_lowercase(str1):\n return re.sub('[a-z]', '', str1)"
+  },
+  {
+    "documentation": "Returns the first digit of the number.",
+    "code": "def first_Digit(n) :  \n    while n >= 10:  \n        n = n / 10 \n    return int(n) "
+  },
+  {
+    "documentation": "Returns only the odd integers from the list.",
+    "code": "def Split(list): \n    od_li = [] \n    for i in list: \n        if (i % 2 != 0): \n            od_li.append(i)  \n    return od_li"
+  },
+  {
+    "documentation": "Returns the difference between the sum of cubes and the sum of first n natural numbers.",
+    "code": "def difference(n) :  \n    S = (n*(n + 1))//2;  \n    res = S*(S-1);  \n    return res;  "
+  },
+  {
+    "documentation": "Counts the number of pairs in the list whose XOR is odd.",
+    "code": "def find_Odd_Pair(A,N) : \n    oddPair = 0\n    for i in range(0,N) :  \n        for j in range(i+1,N) :  \n            if ((A[i] ^ A[j]) % 2 != 0):  \n                oddPair+=1  \n    return oddPair  "
+  },
+  {
+    "documentation": "Toggles the case of all characters in the string.",
+    "code": "def toggle_string(string):\n string1 = string.swapcase()\n return string1"
+  },
+  {
+    "documentation": "Returns the sum of per-digit differences between two integers.",
+    "code": "def digit_distance_nums(n1, n2):\n         return sum(map(int,str(abs(n1-n2))))"
+  },
+  {
+    "documentation": "Returns the sum of the largest contiguous sublist.",
+    "code": "def max_sub_array_sum(a, size):\n  max_so_far = 0\n  max_ending_here = 0\n  for i in range(0, size):\n    max_ending_here = max_ending_here + a[i]\n    if max_ending_here < 0:\n      max_ending_here = 0\n    elif (max_so_far < max_ending_here):\n      max_so_far = max_ending_here\n  return max_so_far"
+  },
+  {
+    "documentation": "Returns the sorted union of elements from two tuples.",
+    "code": "def union_elements(test_tup1, test_tup2):\n  res = tuple(set(test_tup1 + test_tup2))\n  return (res) "
+  },
+  {
+    "documentation": "Returns the length of the longest sublist.",
+    "code": "def Find_Max_Length(lst):  \n    maxLength = max(len(x) for x in lst )\n    return maxLength "
+  },
+  {
+    "documentation": "Extracts values enclosed in quotation marks.",
+    "code": "import re\ndef extract_values(text):\n return (re.findall(r'\"(.*?)\"', text))"
+  },
+  {
+    "documentation": "Counts unordered unequal pairs of integers in the list.",
+    "code": "def count_Pairs(arr,n): \n    cnt = 0; \n    for i in range(n): \n        for j in range(i + 1,n): \n            if (arr[i] != arr[j]): \n                cnt += 1; \n    return cnt; "
+  },
+  {
+    "documentation": "Splits the string into individual characters.",
+    "code": "def split(word): \n    return [char for char in word] "
+  },
+  {
+    "documentation": "Returns the sum of the digits of a non-negative integer.",
+    "code": "def sum_digits(n):\n  if n == 0:\n    return 0\n  else:\n    return n % 10 + sum_digits(int(n / 10))"
+  },
+  {
+    "documentation": "Checks whether the list is sorted.",
+    "code": "def issort_list(list1):\n    result = all(list1[i] <= list1[i+1] for i in range(len(list1)-1))\n    return result"
+  },
+  {
+    "documentation": "Creates a list of N empty dictionaries.",
+    "code": "def empty_list(length):\n empty_list = [{} for _ in range(length)]\n return empty_list"
+  },
+  {
+    "documentation": "Sorts each sublist of strings in the list.",
+    "code": "def sort_sublists(list1):\n    result = list(map(sorted,list1)) \n    return result"
+  },
+  {
+    "documentation": "Removes duplicate numbers from multiple lists.",
+    "code": "def two_unique_nums(nums):\n  return [i for i in nums if nums.count(i)==1]"
+  },
+  {
+    "documentation": "Returns the product of all unique numbers in the list.",
+    "code": "def unique_product(list_data):\n    temp = list(set(list_data))\n    p = 1\n    for i in temp:\n        p *= i\n    return p"
+  },
+  {
+    "documentation": "Returns the surface area of a cylinder.",
+    "code": "def surfacearea_cylinder(r,h):\n  surfacearea=((2*3.1415*r*r) +(2*3.1415*r*h))\n  return surfacearea"
+  },
+  {
+    "documentation": "Checks whether a list is a sublist of another list.",
+    "code": "def is_Sub_Array(A,B): \n    n = len(A)\n    m = len(B)\n    i = 0; j = 0; \n    while (i < n and j < m):  \n        if (A[i] == B[j]): \n            i += 1; \n            j += 1; \n            if (j == m): \n                return True;  \n        else: \n            i = i - j + 1; \n            j = 0;       \n    return False; "
+  },
+  {
+    "documentation": "Returns the last digit of the factorial of the number.",
+    "code": "def last_Digit_Factorial(n): \n    if (n == 0): return 1\n    elif (n <= 2): return n  \n    elif (n == 3): return 6\n    elif (n == 4): return 4 \n    else: \n      return 0"
+  },
+  {
+    "documentation": "Interleaves three lists into a flat list.",
+    "code": "def interleave_lists(list1,list2,list3):\n    result = [el for pair in zip(list1, list2, list3) for el in pair]\n    return result"
+  },
+  {
+    "documentation": "Returns the dissimilar elements between two tuples.",
+    "code": "def find_dissimilar(test_tup1, test_tup2):\n  res = tuple(set(test_tup1) ^ set(test_tup2))\n  return (res) "
+  },
+  {
+    "documentation": "Removes uneven elements from the nested mixed tuple.",
+    "code": "def even_ele(test_tuple, even_fnc): \n\tres = tuple() \n\tfor ele in test_tuple: \n\t\tif isinstance(ele, tuple): \n\t\t\tres += (even_ele(ele, even_fnc), ) \n\t\telif even_fnc(ele): \n\t\t\tres += (ele, ) \n\treturn res \ndef extract_even(test_tuple):\n  res = even_ele(test_tuple, lambda x: x % 2 == 0)\n  return (res) "
+  },
+  {
+    "documentation": "Returns the surface area of a square pyramid.",
+    "code": "def surface_Area(b,s): \n    return 2 * b * s + pow(b,2) "
+  },
+  {
+    "documentation": "Checks whether the dictionary is empty.",
+    "code": "def my_dict(dict1):\n  if bool(dict1):\n     return False\n  else:\n     return True"
+  },
+  {
+    "documentation": "Returns the nth Catalan number.",
+    "code": "def catalan_number(num):\n    if num <=1:\n         return 1   \n    res_num = 0\n    for i in range(num):\n        res_num += catalan_number(i) * catalan_number(num-i-1)\n    return res_num"
+  },
+  {
+    "documentation": "Finds the first adverb ending in \"ly\" and its position.",
+    "code": "import re\ndef find_adverbs(text):\n  for m in re.finditer(r\"\\w+ly\", text):\n    return ('%d-%d: %s' % (m.start(), m.end(), m.group(0)))"
+  },
+  {
+    "documentation": "Returns the n most expensive items in the dataset.",
+    "code": "import heapq\ndef expensive_items(items,n):\n  expensive_items = heapq.nlargest(n, items, key=lambda s: s['price'])\n  return expensive_items"
+  },
+  {
+    "documentation": "Splits the list at the nth element and appends the first part to the end.",
+    "code": "def split_Arr(l, n):\n  return l[n:] + l[:n]"
+  },
+  {
+    "documentation": "Converts the list to a tuple.",
+    "code": "def list_tuple(listx):\n  tuplex = tuple(listx)\n  return tuplex"
+  },
+  {
+    "documentation": "Returns the difference between the largest and smallest values in the list.",
+    "code": "def big_diff(nums):\n     diff= max(nums)-min(nums)\n     return diff"
+  },
+  {
+    "documentation": "Returns all perfect squares between the two numbers.",
+    "code": "def perfect_squares(a, b):\n    lists=[]\n    for i in range (a,b+1):\n        j = 1;\n        while j*j <= i:\n            if j*j == i:\n                 lists.append(i)  \n            j = j+1\n        i = i+1\n    return lists"
+  },
+  {
+    "documentation": "Converts polar coordinates to rectangular coordinates.",
+    "code": "import cmath\ndef polar_rect(x,y):\n cn = complex(x,y)\n cn=cmath.polar(cn)\n cn1 = cmath.rect(2, cmath.pi)\n return (cn,cn1)"
+  },
+  {
+    "documentation": "Swaps the first and last elements in the list.",
+    "code": "def swap_List(newList): \n    size = len(newList) \n    temp = newList[0] \n    newList[0] = newList[size - 1] \n    newList[size - 1] = temp  \n    return newList "
+  },
+  {
+    "documentation": "Returns the sum of products of consecutive binomial coefficients.",
+    "code": "def binomial_Coeff(n,k): \n    C = [0] * (k + 1); \n    C[0] = 1; # nC0 is 1 \n    for i in range(1,n + 1):  \n        for j in range(min(i, k),0,-1): \n            C[j] = C[j] + C[j - 1]; \n    return C[k]; \ndef sum_Of_product(n): \n    return binomial_Coeff(2 * n,n - 1); "
+  },
+  {
+    "documentation": "Removes leading zeroes from an IP address.",
+    "code": "import re\ndef removezero_ip(ip):\n string = re.sub('\\.[0]*', '.', ip)\n return string\n"
+  },
+  {
+    "documentation": "Returns the difference between the first even and the first odd number in the given list.",
+    "code": "def diff_even_odd(list1):\n    first_even = next((el for el in list1 if el%2==0),-1)\n    first_odd = next((el for el in list1 if el%2!=0),-1)\n    return (first_even-first_odd)"
+  },
+  {
+    "documentation": "Returns the minimum number of swaps needed to convert one binary string into another.",
+    "code": "def min_Swaps(str1,str2) : \n    count = 0\n    for i in range(len(str1)) :  \n        if str1[i] != str2[i] : \n            count += 1\n    if count % 2 == 0 : \n        return (count // 2) \n    else : \n        return (\"Not Possible\") "
+  },
+  {
+    "documentation": "Returns the size in bytes of the given tuple.",
+    "code": "import sys \ndef tuple_size(tuple_list):\n  return (sys.getsizeof(tuple_list)) "
+  },
+  {
+    "documentation": "Returns the k-th element from the merged sorted arrays.",
+    "code": "def find_kth(arr1, arr2, k):\n\tm = len(arr1)\n\tn = len(arr2)\n\tsorted1 = [0] * (m + n)\n\ti = 0\n\tj = 0\n\td = 0\n\twhile (i < m and j < n):\n\t\tif (arr1[i] < arr2[j]):\n\t\t\tsorted1[d] = arr1[i]\n\t\t\ti += 1\n\t\telse:\n\t\t\tsorted1[d] = arr2[j]\n\t\t\tj += 1\n\t\td += 1\n\twhile (i < m):\n\t\tsorted1[d] = arr1[i]\n\t\td += 1\n\t\ti += 1\n\twhile (j < n):\n\t\tsorted1[d] = arr2[j]\n\t\td += 1\n\t\tj += 1\n\treturn sorted1[k - 1]"
+  },
+  {
+    "documentation": "Returns True if the given number is an Armstrong number, otherwise False.",
+    "code": "def armstrong_number(number):\n sum = 0\n times = 0\n temp = number\n while temp > 0:\n           times = times + 1\n           temp = temp // 10\n temp = number\n while temp > 0:\n           reminder = temp % 10\n           sum = sum + (reminder ** times)\n           temp //= 10\n if number == sum:\n           return True\n else:\n           return False"
+  },
+  {
+    "documentation": "Returns the sum and average of the first n natural numbers.",
+    "code": "def sum_average(number):\n total = 0\n for value in range(1, number + 1):\n    total = total + value\n average = total / number\n return (total,average)"
+  },
+  {
+    "documentation": "Returns True if the given number is even, otherwise False.",
+    "code": "def is_Even(n) : \n    if (n^1 == n+1) :\n        return True; \n    else :\n        return False; "
+  },
+  {
+    "documentation": "Returns the first repeated character in the given string.",
+    "code": "def first_repeated_char(str1):\n  for index,c in enumerate(str1):\n    if str1[:index+1].count(c) > 1:\n      return c"
+  },
+  {
+    "documentation": "Returns a list of all lucid numbers less than or equal to the given integer.",
+    "code": "def get_ludic(n):\n\tludics = []\n\tfor i in range(1, n + 1):\n\t\tludics.append(i)\n\tindex = 1\n\twhile(index != len(ludics)):\n\t\tfirst_ludic = ludics[index]\n\t\tremove_index = index + first_ludic\n\t\twhile(remove_index < len(ludics)):\n\t\t\tludics.remove(ludics[remove_index])\n\t\t\tremove_index = remove_index + first_ludic - 1\n\t\tindex += 1\n\treturn ludics"
+  },
+  {
+    "documentation": "Returns the string with its words reversed, separated by spaces.",
+    "code": "def reverse_words(s):\n        return ' '.join(reversed(s.split()))"
+  },
+  {
+    "documentation": "Returns True if the given integer is a prime number, otherwise False.",
+    "code": "def prime_num(num):\n  if num >=1:\n   for i in range(2, num//2):\n     if (num % i) == 0:\n                return False\n     else:\n                return True\n  else:\n          return False"
+  },
+  {
+    "documentation": "Returns the angle in radians converted from degrees.",
+    "code": "import math\ndef radian_degree(degree):\n radian = degree*(math.pi/180)\n return radian"
+  },
+  {
+    "documentation": "Returns the matching substring, start index, and end index of the regex pattern found in the string.",
+    "code": "import re\n\ndef find_literals(text, pattern):\n  match = re.search(pattern, text)\n  s = match.start()\n  e = match.end()\n  return (match.re.pattern, s, e)"
+  },
+  {
+    "documentation": "Returns the n-th Bell number.",
+    "code": "def bell_Number(n): \n    bell = [[0 for i in range(n+1)] for j in range(n+1)] \n    bell[0][0] = 1\n    for i in range(1, n+1):\n        bell[i][0] = bell[i-1][i-1]\n        for j in range(1, i+1): \n            bell[i][j] = bell[i-1][j-1] + bell[i][j-1] \n    return bell[n][0] "
+  },
+  {
+    "documentation": "Returns a list with the k-th element removed from the original list.",
+    "code": "def remove_kth_element(list1, L):\n    return  list1[:L-1] + list1[L:]"
+  },
+  {
+    "documentation": "Returns the maximum value in the n-th column of the given matrix.",
+    "code": "def max_of_nth(test_list, N):\n  res = max([sub[N] for sub in test_list])\n  return (res) "
+  },
+  {
+    "documentation": "Returns a list of two lists, one with the first elements and the other with the second elements of each sublist.",
+    "code": "def merge(lst):  \n    return [list(ele) for ele in list(zip(*lst))] "
+  },
+  {
+    "documentation": "Returns the cumulative sum of all values present in the given list of tuples.",
+    "code": "def cummulative_sum(test_list):\n  res = sum(map(sum, test_list))\n  return (res)"
+  },
+  {
+    "documentation": "Returns a list containing the average value of each tuple in the given tuple of tuples.",
+    "code": "def average_tuple(nums):\n    result = [sum(x) / len(x) for x in zip(*nums)]\n    return result"
+  },
+  {
+    "documentation": "Returns a tuple with the element-wise modulo results of the two input tuples.",
+    "code": "def tuple_modulo(test_tup1, test_tup2):\n  res = tuple(ele1 % ele2 for ele1, ele2 in zip(test_tup1, test_tup2)) \n  return (res) "
+  },
+  {
+    "documentation": "Returns the number of jumps required to reach the point (d, 0) from the origin with the given jump length.",
+    "code": "def min_Jumps(steps, d): \n    (a, b) = steps\n    temp = a \n    a = min(a, b) \n    b = max(temp, b) \n    if (d >= b): \n        return (d + b - 1) / b \n    if (d == 0): \n        return 0\n    if (d == a): \n        return 1\n    else:\n        return 2"
+  },
+  {
+    "documentation": "Returns a list resulting from element-wise division of two input lists.",
+    "code": "def div_list(nums1,nums2):\n  result = map(lambda x, y: x / y, nums1, nums2)\n  return list(result)"
+  },
+  {
+    "documentation": "Returns a string with all numbers moved to the end.",
+    "code": "def move_num(test_str):\n  res = ''\n  dig = ''\n  for ele in test_str:\n    if ele.isdigit():\n      dig += ele\n    else:\n      res += ele\n  res += dig\n  return (res) "
+  },
+  {
+    "documentation": "Returns the size of the largest subset such that every pair in it is divisible.",
+    "code": "def largest_subset(a):\n\tn = len(a)\n\tdp = [0 for i in range(n)]\n\tdp[n - 1] = 1; \n\tfor i in range(n - 2, -1, -1):\n\t\tmxm = 0;\n\t\tfor j in range(i + 1, n):\n\t\t\tif a[j] % a[i] == 0 or a[i] % a[j] == 0:\n\t\t\t\tmxm = max(mxm, dp[j])\n\t\tdp[i] = 1 + mxm\n\treturn max(dp)"
+  },
+  {
+    "documentation": "Returns the median of two sorted lists of equal size.",
+    "code": "def get_median(arr1, arr2, n):\n  i = 0\n  j = 0\n  m1 = -1\n  m2 = -1\n  count = 0\n  while count < n + 1:\n    count += 1\n    if i == n:\n      m1 = m2\n      m2 = arr2[0]\n      break\n    elif j == n:\n      m1 = m2\n      m2 = arr1[0]\n      break\n    if arr1[i] <= arr2[j]:\n      m1 = m2\n      m2 = arr1[i]\n      i += 1\n    else:\n      m1 = m2\n      m2 = arr2[j]\n      j += 1\n  return (m1 + m2)/2"
+  },
+  {
+    "documentation": "Returns a list where each number is raised to the n-th power.",
+    "code": "def nth_nums(nums,n):\n nth_nums = list(map(lambda x: x ** n, nums))\n return nth_nums"
+  },
+  {
+    "documentation": "Returns the given string converted to uppercase.",
+    "code": "def is_upper(string):\n  return (string.upper())"
+  },
+  {
+    "documentation": "Returns the list with the first and last elements interchanged.",
+    "code": "def swap_List(newList): \n    size = len(newList) \n    temp = newList[0] \n    newList[0] = newList[size - 1] \n    newList[size - 1] = temp   \n    return newList "
+  },
+  {
+    "documentation": "Returns the area of the largest triangle that can be inscribed in a semicircle with the given radius.",
+    "code": "def triangle_area(r) :  \n    if r < 0 : \n        return None\n    return r * r "
+  },
+  {
+    "documentation": "Returns the smallest missing number in a sorted list of natural numbers.",
+    "code": "def find_First_Missing(array,start=0,end=None):\n    if end is None:\n      end = len(array) - 1   \n    if (start > end): \n        return end + 1\n    if (start != array[start]): \n        return start; \n    mid = int((start + end) / 2) \n    if (array[mid] == mid): \n        return find_First_Missing(array,mid+1,end) \n    return find_First_Missing(array,start,mid) "
+  },
+  {
+    "documentation": "Returns the input string with all spaces replaced by '%20'.",
+    "code": "def replace_spaces(string):\n  return string.replace(\" \", \"%20\")"
+  },
+  {
+    "documentation": "Returns a list of even numbers from the input list.",
+    "code": "def Split(list): \n    return [num for num in list if num % 2 == 0]"
+  },
+  {
+    "documentation": "Returns all adjacent coordinates of the given coordinate tuple.",
+    "code": "def adjac(ele, sub = []): \n  if not ele: \n     yield sub \n  else: \n     yield from [idx for j in range(ele[0] - 1, ele[0] + 2) \n                for idx in adjac(ele[1:], sub + [j])] \ndef get_coordinates(test_tup):\n  return list(adjac(test_tup))"
+  },
+  {
+    "documentation": "Returns the string with whitespaces replaced by underscores and vice versa.",
+    "code": "def replace_spaces(text):\n  return \"\".join(\" \" if c == \"_\" else (\"_\" if c == \" \" else c) for c in text)"
+  },
+  {
+    "documentation": "Returns the list with all zeroes moved to the end.",
+    "code": "def move_zero(num_list):\n    a = [0 for i in range(num_list.count(0))]\n    x = [i for i in num_list if i != 0]\n    return x + a"
+  },
+  {
+    "documentation": "Returns the sum of XOR of all pairs in the list.",
+    "code": "def pair_xor_Sum(arr,n) : \n    ans = 0 \n    for i in range(0,n) :    \n        for j in range(i + 1,n) :   \n            ans = ans + (arr[i] ^ arr[j])          \n    return ans "
+  },
+  {
+    "documentation": "Returns the sorted version of the given list.",
+    "code": "import heapq as hq\ndef heap_sort(iterable):\n    h = []\n    for value in iterable:\n        hq.heappush(h, value)\n    return [hq.heappop(h) for i in range(len(h))]"
+  },
+  {
+    "documentation": "Returns True if the given amount indicates no profit and no loss, otherwise False.",
+    "code": "def noprofit_noloss(actual_cost,sale_amount): \n  if(sale_amount == actual_cost):\n    return True\n  else:\n    return False"
+  },
+  {
+    "documentation": "Returns the wind chill index as an integer rounded up, based on wind speed and temperature.",
+    "code": "import math\ndef wind_chill(v,t):\n windchill = 13.12 + 0.6215*t -  11.37*math.pow(v, 0.16) + 0.3965*t*math.pow(v, 0.16)\n return int(round(windchill, 0))"
+  },
+  {
+    "documentation": "Returns the sum of the lengths of names after removing those that start with a lowercase letter.",
+    "code": "def sample_nam(sample_names):\n  sample_names=list(filter(lambda el:el[0].isupper() and el[1:].islower(),sample_names))\n  return len(''.join(sample_names))"
+  },
+  {
+    "documentation": "Returns the string with parentheses and the content inside them removed.",
+    "code": "import re\ndef remove_parenthesis(items):\n for item in items:\n    return (re.sub(r\" ?\\([^)]+\\)\", \"\", item))"
+  },
+  {
+    "documentation": "Returns the n-th nonagonal number.",
+    "code": "def is_nonagonal(n): \n\treturn int(n * (7 * n - 5) / 2) "
+  },
+  {
+    "documentation": "Returns True if the input string contains a 'z' not at the start or end, otherwise False.",
+    "code": "import re\ndef text_match_wordz_middle(text):\n        return bool(re.search(r'\\Bz\\B',  text))"
+  },
+  {
+    "documentation": "Returns the array reversed up to the given position.",
+    "code": "def reverse_Array_Upto_K(input, k): \n  return (input[k-1::-1] + input[k:]) "
+  },
+  {
+    "documentation": "Returns a tuple with the original elements and the dictionary added at the end.",
+    "code": "def add_dict_to_tuple(test_tup, test_dict):\n  test_tup = list(test_tup)\n  test_tup.append(test_dict)\n  test_tup = tuple(test_tup)\n  return (test_tup) "
+  },
+  {
+    "documentation": "Returns the maximum average path value over all paths from top-left to bottom-right, moving only right or down.",
+    "code": "def maxAverageOfPath(cost):\n  N = len(cost)\n  dp = [[0 for i in range(N + 1)] for j in range(N + 1)]\n  dp[0][0] = cost[0][0]\n  for i in range(1, N):\n    dp[i][0] = dp[i - 1][0] + cost[i][0]\n  for j in range(1, N):\n    dp[0][j] = dp[0][j - 1] + cost[0][j]\n  for i in range(1, N):\n    for j in range(1, N):\n      dp[i][j] = max(dp[i - 1][j],\n                     dp[i][j - 1]) + cost[i][j]\n  return dp[N - 1][N - 1] / (2 * N - 1)"
+  },
+  {
+    "documentation": "Returns a dictionary of students whose height and weight are above the given minimum values.",
+    "code": "def filter_data(students,h,w):\n    result = {k: s for k, s in students.items() if s[0] >=h and s[1] >=w}\n    return result    "
+  },
+  {
+    "documentation": "Returns the number of indices at which two lists have the same values.",
+    "code": "from operator import eq\ndef count_same_pair(nums1, nums2):\n    result = sum(map(eq, nums1, nums2))\n    return result"
+  },
+  {
+    "documentation": "Returns the sum of the digits of the base raised to the given power.",
+    "code": "def power_base_sum(base, power):\n    return sum([int(i) for i in str(pow(base, power))])"
+  },
+  {
+    "documentation": "Returns a list of values found between quotation marks in the given string.",
+    "code": "import re\ndef extract_quotation(text1):\n  return (re.findall(r'\"(.*?)\"', text1))"
+  },
+  {
+    "documentation": "Returns a tuple where each element is the product of consecutive elements in the input tuple.",
+    "code": "def multiply_elements(test_tup):\n  res = tuple(i * j for i, j in zip(test_tup, test_tup[1:]))\n  return (res) "
+  },
+  {
+    "documentation": "Returns a list formed by element-wise addition of two input lists.",
+    "code": "def sum_list(lst1,lst2):\n  res_list = [lst1[i] + lst2[i] for i in range(len(lst1))] \n  return res_list"
+  },
+  {
+    "documentation": "Returns the list with all consecutive duplicate elements removed.",
+    "code": "from itertools import groupby\ndef consecutive_duplicates(nums):\n    return [key for key, group in groupby(nums)] "
+  },
+  {
+    "documentation": "Returns the lateral surface area of a cone using the given radius and height.",
+    "code": "import math\ndef lateralsurface_cone(r,h):\n  l = math.sqrt(r * r + h * h)\n  LSA = math.pi * r  * l\n  return LSA"
+  },
+  {
+    "documentation": "Returns a string where spaces, commas, and dots are replaced with colons.",
+    "code": "import re\ndef replace_specialchar(text):\n return (re.sub(\"[ ,.]\", \":\", text))\n"
+  },
+  {
+    "documentation": "Returns the index of the first occurrence of a specified number in a sorted array.",
+    "code": "def find_first_occurrence(A, x):\n    (left, right) = (0, len(A) - 1)\n    result = -1\n    while left <= right:\n        mid = (left + right) // 2\n        if x == A[mid]:\n            result = mid\n            right = mid - 1\n        elif x < A[mid]:\n            right = mid - 1\n        else:\n            left = mid + 1\n    return result"
+  },
+  {
+    "documentation": "Returns the sum of products of all possible sublists of a given list.",
+    "code": "def sum_Of_Subarray_Prod(arr):\n    ans = 0\n    res = 0\n    i = len(arr) - 1\n    while (i >= 0):\n        incr = arr[i]*(1 + res)\n        ans += incr\n        res = incr\n        i -= 1\n    return (ans)"
+  },
+  {
+    "documentation": "Returns the integer obtained by toggling all bits except the first and last of a given number.",
+    "code": "def set_middle_bits(n):  \n    n |= n >> 1; \n    n |= n >> 2; \n    n |= n >> 4; \n    n |= n >> 8; \n    n |= n >> 16;  \n    return (n >> 1) ^ 1\ndef toggle_middle_bits(n): \n    if (n == 1): \n        return 1\n    return n ^ set_middle_bits(n) "
+  },
+  {
+    "documentation": "Returns the index to insert a specified value in a sorted list to maintain sorted order.",
+    "code": "import bisect\ndef left_insertion(a, x):\n    i = bisect.bisect_left(a, x)\n    return i"
+  },
+  {
+    "documentation": "Returns True if the input string starts with a vowel using regex, otherwise False.",
+    "code": "import re \nregex = '^[aeiouAEIOU][A-Za-z0-9_]*'\ndef check_str(string): \n\treturn re.search(regex, string)"
+  },
+  {
+    "documentation": "Returns the geometric sum of the first n-1 terms.",
+    "code": "def geometric_sum(n):\n  if n < 0:\n    return 0\n  else:\n    return 1 / (pow(2, n)) + geometric_sum(n - 1)"
+  },
+  {
+    "documentation": "Returns the index of the smallest triangular number with the specified number of digits.",
+    "code": "import math \ndef find_Index(n): \n    x = math.sqrt(2 * math.pow(10,(n - 1)))\n    return round(x)"
+  },
+  {
+    "documentation": "Returns a dictionary created from a tuple where adjacent elements form key-value pairs.",
+    "code": "def tuple_to_dict(test_tup):\n  res = dict(test_tup[idx : idx + 2] for idx in range(0, len(test_tup), 2))\n  return (res) "
+  },
+  {
+    "documentation": "Returns True if all characters in the input string are the same, otherwise False.",
+    "code": "def all_Characters_Same(s) :\n    n = len(s)\n    for i in range(1,n) :\n        if s[i] != s[0] :\n            return False\n    return True"
+  },
+  {
+    "documentation": "Returns the area of a tetrahedron using the given side length.",
+    "code": "import math\ndef area_tetrahedron(side):\n  area = math.sqrt(3)*(side*side)\n  return area"
+  },
+  {
+    "documentation": "Returns a list rotated to the right by the specified number of positions.",
+    "code": "def rotate_right(list, m):\n  result =  list[-m:] + list[:-m]\n  return result"
+  },
+  {
+    "documentation": "Returns True if the given tuple contains any None value, otherwise False.",
+    "code": "def check_none(test_tup):\n  res = any(map(lambda ele: ele is None, test_tup))\n  return res "
+  },
+  {
+    "documentation": "Returns a list of numbers in the given range that are divisible by all their digits.",
+    "code": "def divisible_by_digits(startnum, endnum):\n    return [n for n in range(startnum, endnum+1) \\\n                if not any(map(lambda x: int(x) == 0 or n%int(x) != 0, str(n)))]"
+  },
+  {
+    "documentation": "Returns the area of a sector or None if the angle is greater than 360 degrees.",
+    "code": "import math\ndef sector_area(r,a):\n    if a > 360:\n        return None\n    return (math.pi*r**2) * (a/360)"
+  },
+  {
+    "documentation": "Returns the longest common subsequence among three input strings.",
+    "code": "def lcs_of_three(X, Y, Z): \n  m = len(X)\n  n = len(Y)\n  o = len(Z)\n  L = [[[0 for i in range(o+1)] for j in range(n+1)] for k in range(m+1)]\n  for i in range(m+1): \n\t  for j in range(n+1): \n\t\t  for k in range(o+1): \n\t\t\t  if (i == 0 or j == 0 or k == 0): \n\t\t\t\t  L[i][j][k] = 0\n\t\t\t  elif (X[i-1] == Y[j-1] and X[i-1] == Z[k-1]): \n\t\t\t\t  L[i][j][k] = L[i-1][j-1][k-1] + 1\n\t\t\t  else: \n\t\t\t\t  L[i][j][k] = max(max(L[i-1][j][k], L[i][j-1][k]), L[i][j][k-1]) \n  return L[m][n][o]"
+  },
+  {
+    "documentation": "Returns a string with spaces inserted before each capital letter in a given string.",
+    "code": "import re\ndef capital_words_spaces(str1):\n  return re.sub(r\"(\\w)([A-Z])\", r\"\\1 \\2\", str1)"
+  },
+  {
+    "documentation": "Returns a list of numeric strings sorted in numerical order.",
+    "code": "def sort_numeric_strings(nums_str):\n    result = [int(x) for x in nums_str]\n    result.sort()\n    return result"
+  },
+  {
+    "documentation": "Returns a list with the given tuple appended to the end.",
+    "code": "def add_tuple(test_list, test_tup):\n  test_list += test_tup\n  return test_list"
+  },
+  {
+    "documentation": "Returns True if the given array represents a min heap, otherwise False.",
+    "code": "def check_min_heap_helper(arr, i):\n    if 2 * i + 2 > len(arr):\n        return True\n    left_child = (arr[i] <= arr[2 * i + 1]) and check_min_heap_helper(arr, 2 * i + 1)\n    right_child = (2 * i + 2 == len(arr)) or (arr[i] <= arr[2 * i + 2] \n                                      and check_min_heap_helper(arr, 2 * i + 2))\n    return left_child and right_child\n\ndef check_min_heap(arr):\n  return check_min_heap_helper(arr, 0)"
+  },
+  {
+    "documentation": "Returns the nth Jacobsthal number.",
+    "code": "def jacobsthal_num(n): \n\tdp = [0] * (n + 1) \n\tdp[0] = 0\n\tdp[1] = 1\n\tfor i in range(2, n+1): \n\t\tdp[i] = dp[i - 1] + 2 * dp[i - 2] \n\treturn dp[n]"
+  },
+  {
+    "documentation": "Returns the k minimum records from a list of tuples based on the test case criteria.",
+    "code": "def min_k(test_list, K):\n  res = sorted(test_list, key = lambda x: x[1])[:K]\n  return (res) "
+  },
+  {
+    "documentation": "Returns the list of elements that appear at the same index in three input lists.",
+    "code": "def extract_index_list(l1, l2, l3):\n    result = []\n    for m, n, o in zip(l1, l2, l3):\n        if (m == n == o):\n            result.append(m)\n    return result"
+  },
+  {
+    "documentation": "Returns the second smallest number in a given list.",
+    "code": "def second_smallest(numbers):\n  unique_numbers = list(set(numbers))\n  unique_numbers.sort()\n  if len(unique_numbers) < 2:\n    return None\n  else:\n    return unique_numbers[1]"
+  },
+  {
+    "documentation": "Returns True if the input string matches the pattern 'a' followed by one or more 'b's.",
+    "code": "import re\ndef text_match_zero_one(text):\n        patterns = 'ab+?'\n        if re.search(patterns,  text):\n                return True\n        else:\n                return False"
+  },
+  {
+    "documentation": "Returns the count of reverse string pairs in the given list.",
+    "code": "def count_reverse_pairs(test_list):\n  res = sum([1 for idx in range(0, len(test_list)) for idxn in range(idx, len( \n\ttest_list)) if test_list[idxn] == str(''.join(list(reversed(test_list[idx]))))]) \n  return res"
+  },
+  {
+    "documentation": "Returns a dictionary where each list in the original list is converted to a tuple with its count of occurrences.",
+    "code": "def unique_sublists(list1):\n    result ={}\n    for l in  list1: \n        result.setdefault(tuple(l), list()).append(1) \n    for a, b in result.items(): \n        result[a] = sum(b)\n    return result"
+  },
+  {
+    "documentation": "Returns True if the input string is a decimal number with two digits of precision, otherwise False.",
+    "code": "def is_decimal(num):\n    import re\n    dnumre = re.compile(r\"\"\"^[0-9]+(\\.[0-9]{1,2})?$\"\"\")\n    result = dnumre.search(num)\n    return bool(result)"
+  },
+  {
+    "documentation": "Returns True if all elements in the list are the same, otherwise False.",
+    "code": "def unique_Element(arr):\n    s = set(arr)\n    return len(s) == 1"
+  },
+  {
+    "documentation": "Returns True if the month number corresponds to a month with 30 days, otherwise False.",
+    "code": "def check_monthnumber_number(monthnum3):\n  return monthnum3==4 or monthnum3==6 or monthnum3==9 or monthnum3==11"
+  },
+  {
+    "documentation": "Returns the minimum absolute difference between any two elements in the array.",
+    "code": "def find_min_diff(arr,n): \n    arr = sorted(arr) \n    diff = 10**20 \n    for i in range(n-1): \n        if arr[i+1] - arr[i] < diff: \n            diff = arr[i+1] - arr[i]  \n    return diff "
+  },
+  {
+    "documentation": "Returns the number of digits present in the given string.",
+    "code": "def number_ctr(str):\n      number_ctr= 0\n      for i in range(len(str)):\n          if str[i] >= '0' and str[i] <= '9': number_ctr += 1     \n      return  number_ctr"
+  },
+  {
+    "documentation": "Returns the nth polite number.",
+    "code": "import math \ndef is_polite(n): \n\tn = n + 1\n\treturn (int)(n+(math.log((n + math.log(n, 2)), 2))) "
+  },
+  {
+    "documentation": "Returns a list of all pairs of consecutive elements in the input list.",
+    "code": "def pair_wise(l1):\n    temp = []\n    for i in range(len(l1) - 1):\n        current_element, next_element = l1[i], l1[i + 1]\n        x = (current_element, next_element)\n        temp.append(x)\n    return temp"
+  },
+  {
+    "documentation": "Returns the count of number pairs whose sum equals the specified target sum.",
+    "code": "def get_pairs_count(arr, sum):\n    count = 0  \n    for i in range(len(arr)):\n        for j in range(i + 1,len(arr)):\n            if arr[i] + arr[j] == sum:\n                count += 1\n    return count"
+  },
+  {
+    "documentation": "Returns a list of elements that are present in one list but not the other.",
+    "code": "def Diff(li1,li2):\n    return list(set(li1)-set(li2)) + list(set(li2)-set(li1))\n "
+  },
+  {
+    "documentation": "Returns the sum of the fourth powers of the first n odd natural numbers.",
+    "code": "def odd_num_sum(n) : \n    j = 0\n    sm = 0\n    for i in range(1,n + 1) : \n        j = (2*i-1) \n        sm = sm + (j*j*j*j)   \n    return sm "
+  },
+  {
+    "documentation": "Returns True if the parentheses in the expression are balanced, otherwise False.",
+    "code": "from collections import deque\ndef check_expression(exp):\n    if len(exp) & 1:\n        return False\n    stack = deque()\n    for ch in exp:\n        if ch == '(' or ch == '{' or ch == '[':\n            stack.append(ch)\n        if ch == ')' or ch == '}' or ch == ']':\n            if not stack:\n                return False\n            top = stack.pop()\n            if (top == '(' and ch != ')') or (top == '{' and ch != '}' or (top == '[' and ch != ']')):\n                return False\n    return not stack"
+  },
+  {
+    "documentation": "Returns a string with all words of the specified length removed.",
+    "code": "def remove_length(test_str, K):\n  temp = test_str.split()\n  res = [ele for ele in temp if len(ele) != K]\n  res = ' '.join(res)\n  return (res) "
+  },
+  {
+    "documentation": "Returns a list of positions and matches for a given substring, or None if there is no match.",
+    "code": "import re\ndef occurance_substring(text,pattern):\n for match in re.finditer(pattern, text):\n    s = match.start()\n    e = match.end()\n    return (text[s:e], s, e)"
+  },
+  {
+    "documentation": "Returns True if every odd index in the list contains an odd number, otherwise False.",
+    "code": "def odd_position(nums):\n\treturn all(nums[i]%2==i%2 for i in range(len(nums)))"
+  },
+  {
+    "documentation": "Returns the count of characters that have vowels as neighboring characters in the string.",
+    "code": "def count_vowels(test_str):\n  res = 0\n  vow_list = ['a', 'e', 'i', 'o', 'u']\n  for idx in range(1, len(test_str) - 1):\n    if test_str[idx] not in vow_list and (test_str[idx - 1] in vow_list or test_str[idx + 1] in vow_list):\n      res += 1\n  if test_str[0] not in vow_list and test_str[1] in vow_list:\n    res += 1\n  if test_str[-1] not in vow_list and test_str[-2] in vow_list:\n    res += 1\n  return (res) "
+  },
+  {
+    "documentation": "Returns the sum of all non-repeated elements in the input list.",
+    "code": "def find_sum(arr): \n    arr.sort() \n    sum = arr[0] \n    for i in range(len(arr)-1): \n        if (arr[i] != arr[i+1]): \n            sum = sum + arr[i+1]   \n    return sum"
+  },
+  {
+    "documentation": "Returns a list of sublists formed by grouping consecutive duplicate elements.",
+    "code": "from itertools import groupby\ndef pack_consecutive_duplicates(list1):\n    return [list(group) for key, group in groupby(list1)]"
+  },
+  {
+    "documentation": "Returns a dictionary where each unique list (as a tuple) in the original list is mapped to its frequency.",
+    "code": "def unique_sublists(list1):\n    result ={}\n    for l in list1: \n        result.setdefault(tuple(l), list()).append(1) \n    for a, b in result.items(): \n        result[a] = sum(b)\n    return result"
+  },
+  {
+    "documentation": "Returns all combinations of tuples whose elements sum to a specified value.",
+    "code": "from itertools import combinations \ndef find_combinations(test_list):\n  res = [(b1 + a1, b2 + a2) for (a1, a2), (b1, b2) in combinations(test_list, 2)]\n  return (res) "
+  },
+  {
+    "documentation": "Returns True if the count of divisors of a number is even, otherwise False.",
+    "code": "import math \ndef count_divisors(n) : \n    count = 0\n    for i in range(1, (int)(math.sqrt(n)) + 2) : \n        if (n % i == 0) : \n            if( n // i == i) : \n                count = count + 1\n            else : \n                count = count + 2\n    return count % 2 == 0"
+  },
+  {
+    "documentation": "Returns the sum of all subarrays of odd lengths from a given array.",
+    "code": "def odd_length_sum(arr):\n    Sum = 0\n    l = len(arr)\n    for i in range(l):\n        Sum += ((((i + 1) *(l - i) + 1) // 2) * arr[i])\n    return Sum"
+  },
+  {
+    "documentation": "Returns the HSV color equivalent of a given RGB color.",
+    "code": "def rgb_to_hsv(r, g, b):\n    r, g, b = r/255.0, g/255.0, b/255.0\n    mx = max(r, g, b)\n    mn = min(r, g, b)\n    df = mx-mn\n    if mx == mn:\n        h = 0\n    elif mx == r:\n        h = (60 * ((g-b)/df) + 360) % 360\n    elif mx == g:\n        h = (60 * ((b-r)/df) + 120) % 360\n    elif mx == b:\n        h = (60 * ((r-g)/df) + 240) % 360\n    if mx == 0:\n        s = 0\n    else:\n        s = (df/mx)*100\n    v = mx*100\n    return h, s, v"
+  },
+  {
+    "documentation": "Returns the product of the first even and first odd numbers in a given list.",
+    "code": "def mul_even_odd(list1):\n    first_even = next((el for el in list1 if el%2==0),-1)\n    first_odd = next((el for el in list1 if el%2!=0),-1)\n    return (first_even*first_odd)"
+  },
+  {
+    "documentation": "Returns an integer tuple converted from a string representation of a tuple.",
+    "code": "def tuple_str_int(test_str):\n  res = tuple(int(num) for num in test_str.replace('(', '').replace(')', '').replace('...', '').split(', '))\n  return (res) "
+  },
+  {
+    "documentation": "Returns the index where a specified value should be inserted on the right to maintain sorted order.",
+    "code": "import bisect\ndef right_insertion(a, x):\n    return bisect.bisect_right(a, x)"
+  },
+  {
+    "documentation": "Returns True if the input string contains an 'a' followed by exactly three 'b's.",
+    "code": "import re\ndef text_match_three(text):\n        patterns = 'ab{3}?'\n        return re.search(patterns,  text)"
+  },
+  {
+    "documentation": "Returns a new tuple by combining a given string and list.",
+    "code": "def new_tuple(test_list, test_str):\n  return tuple(test_list + [test_str])"
+  },
+  {
+    "documentation": "Returns True if every even index in the list contains an even number, otherwise False.",
+    "code": "def even_position(nums):\n\treturn all(nums[i]%2==i%2 for i in range(len(nums)))"
+  },
+  {
+    "documentation": "Returns a tuple with specified tuples removed from the original tuple.",
+    "code": "def remove_nested(test_tup):\n  res = tuple()\n  for count, ele in enumerate(test_tup):\n    if not isinstance(ele, tuple):\n      res = res + (ele, )\n  return (res) "
+  },
+  {
+    "documentation": "Returns the count of individual lists within a list of lists.",
+    "code": "def count_list(input_list): \n    return len(input_list)"
+  },
+  {
+    "documentation": "Returns the last index of a specified element in a sorted array.",
+    "code": "def last(arr,x):\n    n = len(arr)\n    low = 0\n    high = n - 1\n    res = -1  \n    while (low <= high):\n        mid = (low + high) // 2 \n        if arr[mid] > x:\n            high = mid - 1\n        elif arr[mid] < x:\n            low = mid + 1\n        else:\n            res = mid\n            low = mid + 1\n    return res"
+  },
+  {
+    "documentation": "Returns True if the string contains 'a', followed by any characters, and ending with 'b'.",
+    "code": "import re\ndef text_starta_endb(text):\n        patterns = 'a.*?b$'\n        return re.search(patterns,  text)"
+  },
+  {
+    "documentation": "Returns the sum of all values in the given dictionary.",
+    "code": "def return_sum(dict):\n  sum = 0\n  for i in dict.values():\n    sum = sum + i\n  return sum"
+  },
+  {
+    "documentation": "Returns the sum of all odd natural numbers in the range from l to r.",
+    "code": "def sum_odd(n): \n    terms = (n + 1)//2\n    sum1 = terms * terms \n    return sum1  \ndef sum_in_range(l,r): \n    return sum_odd(r) - sum_odd(l - 1)"
+  },
+  {
+    "documentation": "Returns the sum of all elements in the given array.",
+    "code": "def _sum(arr):  \n    sum=0\n    for i in arr: \n        sum = sum + i      \n    return(sum)  "
+  },
+  {
+    "documentation": "Returns the result of rotating the bits of a 32-bit number to the left by d positions.",
+    "code": "def left_rotate(n,d):   \n    INT_BITS = 32\n    return (n << d)|(n >> (INT_BITS - d))  "
+  },
+  {
+    "documentation": "Returns a string with all whitespaces removed.",
+    "code": "import re\ndef remove_all_spaces(text):\n return (re.sub(r'\\s+', '',text))"
+  },
+  {
+    "documentation": "Returns the count of how many numbers are equal among three given integers.",
+    "code": "def test_three_equal(x,y,z):\n  result = set([x,y,z])\n  if len(result)==3:\n    return 0\n  else:\n    return 4-len(result)"
+  },
+  {
+    "documentation": "Returns the number of rotations needed to make an array sorted in increasing order.",
+    "code": "def count_rotation(arr):   \n    for i in range (1,len(arr)): \n        if (arr[i] < arr[i - 1]): \n            return i  \n    return 0"
+  },
+  {
+    "documentation": "Returns True if the given number is a perfect square, otherwise False.",
+    "code": "def is_perfect_square(n) :\n    i = 1\n    while (i * i<= n):\n        if ((n % i == 0) and (n / i == i)):\n            return True     \n        i = i + 1\n    return False"
+  },
+  {
+    "documentation": "Returns True if the product of numbers in the list is even, otherwise False.",
+    "code": "def is_product_even(arr): \n    for i in range(len(arr)): \n        if (arr[i] & 1) == 0: \n            return True\n    return False"
+  },
+  {
+    "documentation": "Returns the list that has the highest sum of elements among a list of lists.",
+    "code": "def max_sum_list(lists):\n return max(lists, key=sum)"
+  },
+  {
+    "documentation": "Returns the maximum consecutive sequence length of uppercase characters in a string.",
+    "code": "def max_run_uppercase(test_str):\n  cnt = 0\n  res = 0\n  for idx in range(0, len(test_str)):\n    if test_str[idx].isupper():\n      cnt += 1\n    else:\n      res = cnt\n      cnt = 0\n  if test_str[len(test_str) - 1].isupper():\n    res = cnt\n  return (res)"
+  },
+  {
+    "documentation": "Returns the first odd number found in a given list of numbers.",
+    "code": "def first_odd(nums):\n  first_odd = next((el for el in nums if el%2!=0),-1)\n  return first_odd"
+  },
+  {
+    "documentation": "Returns True if the specified value k is found in any of the given tuples, otherwise False.",
+    "code": "def check_K(test_tup, K):\n  res = False\n  for ele in test_tup:\n    if ele == K:\n      res = True\n      break\n  return res "
+  },
+  {
+    "documentation": "Returns True if every element in the second tuple is smaller than its corresponding element in the first tuple, otherwise False.",
+    "code": "def check_smaller(test_tup1, test_tup2):\n  return all(x > y for x, y in zip(test_tup1, test_tup2))"
+  }
+]

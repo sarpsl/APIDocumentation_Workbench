@@ -1,0 +1,427 @@
+The function returns the elements that are common to both of the given lists.
+The function identifies and returns the non-prime numbers from the input.
+The function returns the n largest integers from the input list, sorted in descending order.
+The function checks whether the two numbers differ at exactly one bit position.
+The function returns all words with at least 4 characters from the given string.
+The function returns a list of squares of the individual elements.
+The function returns the minimum number of rotations greater than 0 required to get the same string.
+The function removes the first and last occurrence of a given character from the input string.
+The function sorts the matrix in ascending order based on the sum of its rows.
+The function calculates and returns the volume of a triangular prism.
+The function returns true if the string contains lowercase sequences joined with underscores, otherwise false.
+The function returns the perimeter of a square given its side length.
+The function removes characters from the first string that are present in the second string.
+The function returns true if the array contains any duplicate elements, otherwise false.
+The function checks if the number is a woodball number.
+The function checks whether a number is one less than twice its reverse.
+The function returns the largest number that can be formed using the given digits.
+The function checks whether the two integers have opposite signs.
+The function returns the nth octagonal number.
+The function counts the number of substrings whose digits sum to their length.
+The function returns the smallest number in the list.
+The function returns the maximum difference among all pairs in the tuple list.
+The function sorts the list of tuples using the second value in each tuple.
+The function flattens a list and returns the sum of all its elements.
+The function counts the number of positive numbers in the list.
+The function returns the number of ways to partition a set using Bell numbers.
+The function checks whether the array is monotonic.
+The function checks whether the list contains the given sublist.
+The function checks whether all tuples in the list have equal length.
+The function returns the list sorted in ascending order.
+The function checks if the number can be expressed as the difference of two squares.
+The function checks if a sequence follows the given pattern.
+The function returns tuples where all elements are divisible by k.
+The function checks if the number is divisible by 11.
+The function checks whether the word has odd length.
+The function returns the nth tetrahedral number.
+The function calculates and returns the volume of a sphere.
+The function returns a character calculated by adding ASCII values modulo 26.
+The function returns the nth number in the Newman–Conway sequence.
+The function returns the surface area of a sphere.
+The function returns the nth centered hexagonal number.
+The function merges three dictionaries into one.
+The function returns a dictionary with the frequency of each element in the list.
+The function returns the closest number smaller than n.
+The function returns the length of the longest word in the input.
+The function checks whether a string appears as a substring in the list of strings.
+The function checks whether a number is undulating.
+The function returns the value of ‘a’ raised to the power ‘b’.
+The function returns the first value of the tuple with the smallest second value.
+The function returns the length of the smallest list in a list of lists.
+The function returns the number of divisors of the given integer.
+The function returns a dictionary with frequency of each element in the flattened list.
+The function returns the result of multiplying all numbers and dividing by the length of the list.
+The function converts a decimal number to its binary string representation without leading zeros.
+The function returns the next smallest palindrome greater than the input integer.
+The function returns the kth element from the array using 1-based indexing.
+The function converts a snake\_case string to camelCase.
+The function returns the Eulerian number a(n, m).
+The function sorts each sublist of strings in the list of lists.
+The function counts the number of `True` values in the list.
+The function appends the given list to each of the given tuples.
+The function merges three lists into a single sorted list.
+The function counts how many times rotation of a binary string yields an odd value.
+The function finds the common elements in the nested lists.
+The function checks whether a string represents an integer.
+The function checks whether all dictionaries in a list are empty.
+The function converts a tuple of positive integers into a single integer.
+The function converts all convertible elements in a list of lists to floats.
+The function converts a string into a list split by spaces.
+The function finds the element that appears only once in a sorted array.
+The function returns the maximum absolute product from pairs of tuples in the list.
+The function returns the sum of all amicable numbers up to the specified limit.
+The function returns the angle of the complex number.
+The function finds the maximum difference between 0s and 1s in any substring.
+The function returns the sum of all common divisors of two numbers.
+The function multiplies the two integers and returns the result.
+The function returns words longer than n characters from the list.
+The function checks whether the matrix is a magic square.
+The function returns the item with maximum frequency in the list.
+The function reverses only the vowels in the string.
+The function converts a tuple to a string.
+The function returns the sum of all negative numbers in the list.
+The function returns the nth hexagonal number.
+The function returns the ratio of zeroes to non-zeroes in the list.
+The function checks whether a number can be represented as sum of non-zero powers of 2.
+The function returns the circumference of a circle.
+The function flattens a nested list into a single set of numbers.
+The function returns the list sorted in ascending order.
+The function counts the number of identical items at the same positions across three lists.
+The function returns the number of lists present inside the given tuple.
+The function finds the maximum difference between any two elements in the array.
+The function returns integers x and y satisfying ax + by = n, or None if not possible.
+The function removes all elements from one list that are present in another.
+The function returns the computed sum of the series (n - 2\*i) until the result is non-positive.
+The function calculates the area of a regular polygon given side length and number of sides.
+The function checks whether the sum of divisors of two numbers are equal.
+The function counts the characters that match their position in the English alphabet.
+The function counts the number of integer pairs whose XOR result is even.
+The function returns the smallest power of 2 greater than or equal to n.
+The function counts how many times a number occurs in the list.
+The function returns the sum of numbers in the list within the specified index range.
+The function returns the perimeter of a regular pentagon given the length of its sides.
+The function counts the occurrences of the string 'std' in the given string.
+The function checks whether all elements in the tuple have the same data type.
+The function checks if the given element appears more than n/2 times in the sorted array.
+The function counts the number of set bits in the given number.
+The function removes characters at odd indices from the given string.
+The function returns the minimum among three given numbers.
+The function checks if all bits are unset in the specified range.
+The function rearranges the first n elements of the array to place negatives before positives while preserving order.
+The function replaces spaces in the string with the specified character.
+The function returns the n largest items from the list.
+The function returns the lateral surface area of a cylinder.
+The function returns the volume of a cube from its side length.
+The function sets all even bits of the given number.
+The function returns a dictionary with the count of each unique tuple in the list.
+The function counts all non-empty substrings of the given string.
+The function returns the number of valid sequences of length n under the specified conditions.
+The function replaces the last element of the first list with the contents of the second list.
+The function returns the total number of characters in the string.
+The function returns the next perfect square greater than the given number.
+The function returns the maximum sum of a bitonic subsequence in the array.
+The function computes the square root using the Babylonian method.
+The function returns the length of the longest palindromic subsequence.
+The function returns the harmonic sum of n - 1.
+The function returns the intersection of two arrays.
+The function counts the occurrences of the element in the tuple.
+The function inserts the given element before each element in the list.
+The function converts complex numbers to polar coordinates.
+The function returns the count of integer elements in the list.
+The function generates all length-n combinations with repetition from the list.
+The function returns the count of primes less than the given number.
+The function returns a tuple with the second and first number.
+The function returns the element-wise maximum of two tuples.
+The function returns the nth Newman–Shanks–Williams prime number.
+The function divides elements of the first tuple by the corresponding elements of the second tuple.
+The function splits the list into two parts, the first with length L, and returns both parts as a tuple.
+The function converts dog age in human years to dog years.
+The function splits the list into parts at every nth element.
+The function returns the lateral surface area of a cube from its side length.
+The function returns the sum of squares of the first n odd natural numbers.
+The function returns the nth star number.
+The function returns the ASCII value of the character.
+The function returns the sum of even numbers at even indices in the list.
+The function returns the sum of the fifth powers of the first n even natural numbers.
+The function returns a list containing the last element of each tuple.
+The function subtracts elements of the second tuple from the first tuple index-wise.
+The function returns the sum of binomial coefficients at even indices for the given n.
+The function returns the volume of a cylinder using its radius and height.
+The function filters the dictionary to include only entries with values ≥ n.
+The function returns the count of elements before the specified tuple in the tuple.
+The function returns the nth decagonal number.
+The function checks whether the element exists in the array and returns its index or -1.
+The function checks whether all elements in the list are unique.
+The function performs element-wise subtraction between two lists.
+The function checks if each digit's frequency in the number is less than or equal to the digit itself.
+The function checks whether all items in the list match the given element.
+The function checks if the string has an 'a' followed by two or three 'b's.
+The function returns the largest sum of a contiguous subarray from the array repeated k times.
+The function returns the sum of squares of the first n even natural numbers.
+The function returns the list of maximum length from a list of lists.
+The function returns the number of ways to paint the fence such that no more than 2 adjacent posts have the same color.
+The function returns the floor division result of two numbers.
+The function returns the third side of a right triangle using the Pythagorean theorem.
+The function returns the maximum value in the heterogeneous list.
+The function returns the sum of all divisors of the given number.
+The function counts the number of inversions in the array.
+The function flattens a nested list into a single list.
+The function calculates the maximum aggregate value from the list of tuples.
+The function returns the count of binary sequences of length 2n where first and last n bits have equal sum.
+The function returns the depth (nesting level) of a dictionary.
+The function returns the element at the specified index after applying the given number of rotations.
+The function returns two words from the list that start with 'p'.
+The function returns the maximum increasing subsequence sum until i including element at index k > i.
+The function returns a colon-separated string from the tuple.
+The function returns the specified number of largest products from pairs of elements from two lists.
+The function returns the maximum of two given numbers.
+The function converts the string to a tuple of characters.
+The function sets the leftmost unset bit in the binary representation of the number.
+The function returns the volume of a cone using its radius and height.
+The function returns the highest power of 2 less than or equal to n.
+The function returns the nth Lucas number.
+The function applies the format string to every element in the list.
+The function converts multiple lists into a nested dictionary structure.
+The function returns the maximum sum by computing f(n) = max(f(n/2)+f(n/3)+f(n/4)+f(n/5), n).
+The function returns the list with the maximum length from the list of lists.
+The function checks whether the tuple has no duplicate elements.
+The function returns the first non-repeated character in the string.
+The function checks if the string starts and ends with the same character.
+The function returns the median of three numbers.
+The function returns the sum of digits of each number in the list.
+The function performs bitwise XOR on corresponding elements of the tuples.
+The function returns the number of unique tuples in the list.
+The function adds the tuple elements index-wise across two nested tuples.
+The function returns the minimum of two given numbers.
+The function checks whether the element exists in the tuple.
+The function checks whether the given number has odd parity.
+The function returns the next bigger number formed by rearranging its digits.
+The function returns k smallest pairs from two arrays, each pair consisting of one element from each.
+The function returns the minimum product among all pairs of tuples in the list.
+The function returns the minimum value in the given heterogeneous list.
+The function converts the given snake\_case string to camelCase.
+The function removes all odd numbers from the given list.
+The function extracts the nth element from each tuple in the list.
+The function checks whether any value in the sequence exists or not.
+The function returns the pair of numbers with the highest product from the array.
+The function returns the common first element among the tuples in the list.
+The function returns the element with maximum length from the list.
+The function rounds each number, sums them, and multiplies the result by the list length.
+The function returns the sum of cubes of the first n even natural numbers.
+The function concatenates each tuple element using the given delimiter.
+The function returns the average of cubes of the first n natural numbers.
+The function extracts the last character of each string in the tuple.
+The function counts the number of sublists containing the specified element.
+The function filters and returns only the odd numbers.
+The function converts a date from yyyy-mm-dd format to dd-mm-yyyy format.
+The function sorts the given array using the shell sort algorithm.
+The function returns element-wise logical AND of the two given tuples.
+The function returns the directrix of a parabola.
+The function checks whether the two lists have at least one common element.
+The function returns the median of the lengths of the parallel sides of the trapezium.
+The function checks whether the number is greater than all elements in the array.
+The function returns true if the string contains an 'a' followed by one or more 'b's.
+The function returns the last digit of the given number.
+The function returns all negative numbers in the given list.
+The function removes characters at odd indices from the string.
+The function counts the number of bidirectional tuple pairs in the list.
+The function joins the list of integers into a single integer.
+The function finds the first adverb and its position in the sentence.
+The function returns the surface area of a cube given its side length.
+The function returns the ratio of positive numbers in the array.
+The function returns the largest negative number from the list.
+The function trims each tuple in the list by k elements.
+The function returns the element-wise multiplication of two tuples.
+The function counts how many times each element of the list occurs in the tuple.
+The function returns the cubes of each element in the list.
+The function returns the sum of Perrin numbers.
+The function extracts strings of the specified size from the list.
+The function removes all whitespaces from the string.
+The function returns the loss amount if there is a loss, otherwise 0.
+The function returns the sum of even factors of the given number.
+The function returns true if the word contains the character 'z'.
+The function checks whether the given month has 31 days.
+The function reverses each string in the list.
+The function returns the sublist with the minimum length.
+The function returns the area of a rectangle.
+The function removes all uppercase substrings from the string.
+The function returns the first element of each sublist.
+The function counts uppercase characters in the string.
+The function returns all combinations of the list elements.
+The function returns the maximum product subarray.
+The function returns true if all dictionary values are the same.
+The function removes all empty items from the dictionary.
+The function returns the maximum product of numbers in an increasing subsequence.
+The function returns the pairwise addition of neighboring tuple elements.
+The function returns the product of array elements modulo n.
+The function checks whether the list contains consecutive numbers.
+The function returns the intersection of all tuples, regardless of order.
+The function replaces specified characters in a string.
+The function sorts the dictionary by its values.
+The function returns the sum of the largest and smallest values in the array.
+The function converts the string to lowercase.
+The function removes all lowercase substrings from the string.
+The function returns the first digit of the number.
+The function returns only the odd integers from the list.
+The function returns the difference between the sum of cubes and the sum of first n natural numbers.
+The function counts the number of pairs in the list whose XOR is odd.
+The function toggles the case of all characters in the string.
+The function returns the sum of per-digit differences between two integers.
+The function returns the sum of the largest contiguous sublist.
+The function returns the sorted union of elements from two tuples.
+The function returns the length of the longest sublist.
+The function extracts values enclosed in quotation marks.
+The function counts unordered unequal pairs of integers in the list.
+The function splits the string into individual characters.
+The function returns the sum of the digits of a non-negative integer.
+The function checks whether the list is sorted.
+The function creates a list of N empty dictionaries.
+The function sorts each sublist of strings in the list.
+The function removes duplicate numbers from multiple lists.
+The function returns the product of all unique numbers in the list.
+The function returns the surface area of a cylinder.
+The function checks whether a list is a sublist of another list.
+The function returns the last digit of the factorial of the number.
+The function interleaves three lists into a flat list.
+The function returns the dissimilar elements between two tuples.
+The function removes uneven elements from the nested mixed tuple.
+The function returns the surface area of a square pyramid.
+The function checks whether the dictionary is empty.
+The function returns the nth Catalan number.
+The function finds the first adverb ending in "ly" and its position.
+The function returns the n most expensive items in the dataset.
+The function splits the list at the nth element and appends the first part to the end.
+The function converts the list to a tuple.
+The function returns the difference between the largest and smallest values in the list.
+The function returns all perfect squares between the two numbers.
+The function converts polar coordinates to rectangular coordinates.
+The function swaps the first and last elements in the list.
+The function returns the sum of products of consecutive binomial coefficients.
+The function removes leading zeroes from an IP address.
+The function returns the difference between the first even and the first odd number in the given list.
+The function returns the minimum number of swaps needed to convert one binary string into another.
+The function returns the size in bytes of the given tuple.
+The function returns the k-th element from the merged sorted arrays.
+The function returns True if the given number is an Armstrong number, otherwise False.
+The function returns the sum and average of the first n natural numbers.
+The function returns True if the given number is even, otherwise False.
+The function returns the first repeated character in the given string.
+The function returns a list of all lucid numbers less than or equal to the given integer.
+The function returns the string with its words reversed, separated by spaces.
+The function returns True if the given integer is a prime number, otherwise False.
+The function returns the angle in radians converted from degrees.
+The function returns the matching substring, start index, and end index of the regex pattern found in the string.
+The function returns the n-th Bell number.
+The function returns a list with the k-th element removed from the original list.
+The function returns the maximum value in the n-th column of the given matrix.
+The function returns a list of two lists, one with the first elements and the other with the second elements of each sublist.
+The function returns the cumulative sum of all values present in the given list of tuples.
+The function returns a list containing the average value of each tuple in the given tuple of tuples.
+The function returns a tuple with the element-wise modulo results of the two input tuples.
+The function returns the number of jumps required to reach the point (d, 0) from the origin with the given jump length.
+The function returns a list resulting from element-wise division of two input lists.
+The function returns a string with all numbers moved to the end.
+The function returns the size of the largest subset such that every pair in it is divisible.
+The function returns the median of two sorted lists of equal size.
+The function returns a list where each number is raised to the n-th power.
+The function returns the given string converted to uppercase.
+The function returns the list with the first and last elements interchanged.
+The function returns the area of the largest triangle that can be inscribed in a semicircle with the given radius.
+The function returns the smallest missing number in a sorted list of natural numbers.
+The function returns the input string with all spaces replaced by '%20'.
+The function returns a list of even numbers from the input list.
+The function returns all adjacent coordinates of the given coordinate tuple.
+The function returns the string with whitespaces replaced by underscores and vice versa.
+The function returns the list with all zeroes moved to the end.
+The function returns the sum of XOR of all pairs in the list.
+The function returns the sorted version of the given list.
+The function returns True if the given amount indicates no profit and no loss, otherwise False.
+The function returns the wind chill index as an integer rounded up, based on wind speed and temperature.
+The function returns the sum of the lengths of names after removing those that start with a lowercase letter.
+The function returns the string with parentheses and the content inside them removed.
+The function returns the n-th nonagonal number.
+The function returns True if the input string contains a 'z' not at the start or end, otherwise False.
+The function returns the array reversed up to the given position.
+The function returns a tuple with the original elements and the dictionary added at the end.
+The function returns the maximum average path value over all paths from top-left to bottom-right, moving only right or down.
+The function returns a dictionary of students whose height and weight are above the given minimum values.
+The function returns the number of indices at which two lists have the same values.
+The function returns the sum of the digits of the base raised to the given power.
+The function returns a list of values found between quotation marks in the given string.
+The function returns a tuple where each element is the product of consecutive elements in the input tuple.
+The function returns a list formed by element-wise addition of two input lists.
+The function returns the list with all consecutive duplicate elements removed.
+The function returns the lateral surface area of a cone using the given radius and height.
+The function returns a string where spaces, commas, and dots are replaced with colons.
+The function returns the index of the first occurrence of a specified number in a sorted array.
+The function returns the sum of products of all possible sublists of a given list.
+The function returns the integer obtained by toggling all bits except the first and last of a given number.
+The function returns the index to insert a specified value in a sorted list to maintain sorted order.
+The function returns True if the input string starts with a vowel using regex, otherwise False.
+The function returns the geometric sum of the first n-1 terms.
+The function returns the index of the smallest triangular number with the specified number of digits.
+The function returns a dictionary created from a tuple where adjacent elements form key-value pairs.
+The function returns True if all characters in the input string are the same, otherwise False.
+The function returns the area of a tetrahedron using the given side length.
+The function returns a list rotated to the right by the specified number of positions.
+The function returns True if the given tuple contains any None value, otherwise False.
+The function returns a list of numbers in the given range that are divisible by all their digits.
+The function returns the area of a sector or None if the angle is greater than 360 degrees.
+The function returns the longest common subsequence among three input strings.
+The function returns a string with spaces inserted before each capital letter in a given string.
+The function returns a list of numeric strings sorted in numerical order.
+The function returns a list with the given tuple appended to the end.
+The function returns True if the given array represents a min heap, otherwise False.
+The function returns the nth Jacobsthal number.
+The function returns the k minimum records from a list of tuples based on the test case criteria.
+The function returns the list of elements that appear at the same index in three input lists.
+The function returns the second smallest number in a given list.
+The function returns True if the input string matches the pattern 'a' followed by one or more 'b's.
+The function returns the count of reverse string pairs in the given list.
+The function returns a dictionary where each list in the original list is converted to a tuple with its count of occurrences.
+The function returns True if the input string is a decimal number with two digits of precision, otherwise False.
+The function returns True if all elements in the list are the same, otherwise False.
+The function returns True if the month number corresponds to a month with 30 days, otherwise False.
+The function returns the minimum absolute difference between any two elements in the array.
+The function returns the number of digits present in the given string.
+The function returns the nth polite number.
+The function returns a list of all pairs of consecutive elements in the input list.
+The function returns the count of number pairs whose sum equals the specified target sum.
+The function returns a list of elements that are present in one list but not the other.
+The function returns the sum of the fourth powers of the first n odd natural numbers.
+The function returns True if the parentheses in the expression are balanced, otherwise False.
+The function returns a string with all words of the specified length removed.
+The function returns a list of positions and matches for a given substring, or None if there is no match.
+The function returns True if every odd index in the list contains an odd number, otherwise False.
+The function returns the count of characters that have vowels as neighboring characters in the string.
+The function returns the sum of all non-repeated elements in the input list.
+The function returns a list of sublists formed by grouping consecutive duplicate elements.
+The function returns a dictionary where each unique list (as a tuple) in the original list is mapped to its frequency.
+The function returns all combinations of tuples whose elements sum to a specified value.
+The function returns True if the count of divisors of a number is even, otherwise False.
+The function returns the sum of all subarrays of odd lengths from a given array.
+The function returns the HSV color equivalent of a given RGB color.
+The function returns the product of the first even and first odd numbers in a given list.
+The function returns an integer tuple converted from a string representation of a tuple.
+The function returns the index where a specified value should be inserted on the right to maintain sorted order.
+The function returns True if the input string contains an 'a' followed by exactly three 'b's.
+The function returns a new tuple by combining a given string and list.
+The function returns True if every even index in the list contains an even number, otherwise False.
+The function returns a tuple with specified tuples removed from the original tuple.
+The function returns the count of individual lists within a list of lists.
+The function returns the last index of a specified element in a sorted array.
+The function returns True if the string contains 'a', followed by any characters, and ending with 'b'.
+The function returns the sum of all values in the given dictionary.
+The function returns the sum of all odd natural numbers in the range from l to r.
+The function returns the sum of all elements in the given array.
+The function returns the result of rotating the bits of a 32-bit number to the left by d positions.
+The function returns a string with all whitespaces removed.
+The function returns the count of how many numbers are equal among three given integers.
+The function returns the number of rotations needed to make an array sorted in increasing order.
+The function returns True if the given number is a perfect square, otherwise False.
+The function returns True if the product of numbers in the list is even, otherwise False.
+The function returns the list that has the highest sum of elements among a list of lists.
+The function returns the maximum consecutive sequence length of uppercase characters in a string.
+The function returns the first odd number found in a given list of numbers.
+The function returns True if the specified value k is found in any of the given tuples, otherwise False.
+The function returns True if every element in the second tuple is smaller than its corresponding element in the first tuple, otherwise False.

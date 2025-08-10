@@ -1,0 +1,43 @@
+# Model outputs and checkpoints
+outputs/
+cache_dir/
+runs/
+**/qwen-coder-docgen/
+**/smollm2-docgen*/
+**/logs/
+**/wandb/
+
+# Large dataset files
+*.safetensors
+*.bin
+*.pt
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large compressed files
+*.gz
+*.tar.gz
+*.zip
+
+# Zone Identifier files (Windows)
+*.Zone.Identifier
