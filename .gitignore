@@ -4,13 +4,27 @@ cache_dir/
 runs/
 **/qwen-coder-docgen/
 **/smollm2-docgen*/
+**/fine_tuned_qa_model/
+**/quick_test_model/
 **/logs/
 **/wandb/
+checkpoint-*/
+**/checkpoint-*/
 
 # Large dataset files
 *.safetensors
 *.bin
 *.pt
+*.pth
+
+# Large tokenizer files (>1MB)
+tokenizer.json
+vocab.json
+merges.txt
+
+# Training state files
+trainer_state.json
+rng_state.pth
 
 # Python cache
 __pycache__/
@@ -41,3 +55,7 @@ Thumbs.db
 
 # Zone Identifier files (Windows)
 *.Zone.Identifier
+
+# Temporary files
+*.tmp
+*.temp
