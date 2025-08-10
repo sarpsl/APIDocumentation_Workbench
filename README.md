@@ -301,7 +301,7 @@ If you use this work in your research, please cite:
 ```bibtex
 @repository{api-documentation-pipeline,
   title={API Documentation Training Pipeline},
-  author={Your Name},
+  author={Syed Abdul Rahim},
   year={2025},
   url={https://github.com/sarpsl/APIDocumentation}
 }
