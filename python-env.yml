@@ -1,0 +1,28 @@
+name: python-env
+channels:
+  - defaults
+  - conda-forge
+  - nvidia
+  - pytorch
+dependencies:
+  - python=3.10
+  - pip
+  - pytorch
+  - pytorch-cuda=12.1  # Or 11.8 depending on your driver
+  - cuda-nvcc
+  - pip:
+      - transformers>=4.41.0
+      - datasets
+      - accelerate
+      - peft
+      - bitsandbytes
+      - evaluate
+      - tqdm
+      - sentencepiece
+      - einops
+      - safetensors
+      - ipykernel
+      - bitsandbytes @ https://jllllll.github.io/bitsandbytes-wheels/cu121/bitsandbytes-0.43.0-py3-none-any.whl
+      - evaluate
+      - nltk
+      

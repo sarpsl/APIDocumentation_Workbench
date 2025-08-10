@@ -1,0 +1,17 @@
+torch>=2.0.0
+datasets>=2.14.0
+beautifulsoup4>=4.12.0
+requests>=2.31.0
+pandas>=2.0.0
+tqdm>=4.65.0
+scikit-learn>=1.3.0
+accelerate>=0.20.0
+transformers>=4.41.0
+peft
+sentencepiece
+einops
+safetensors
+ipykernel
+bitsandbytes #@ https://jllllll.github.io/bitsandbytes-wheels/cu121/bitsandbytes-0.43.0-py3-none-any.whl
+evaluate
+nltk
