@@ -1,0 +1,192 @@
+(venv) root@c10771a35f4d:~/Projects/Qwen-FinalFineTuning# python scripts/final-HuggingFaceTB_SmolLM2-360M-Instruct.py 
+Map: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10000/10000 [00:00<00:00, 16541.86 examples/s]
+Map: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [00:00<00:00, 14727.19 examples/s]
+Unused kwargs: ['load_in_8bit_fp32_cpu_offload']. These kwargs are not used in <class 'transformers.utils.quantization_config.BitsAndBytesConfig'>.
+Map: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10000/10000 [00:15<00:00, 652.76 examples/s]
+Map: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [00:02<00:00, 431.17 examples/s]
+============================================================
+DATASET INFORMATION
+============================================================
+Training dataset size: 10000 records
+Validation dataset size: 1000 records
+
+SAMPLE TRAINING RECORDS:
+----------------------------------------
+Training Record 1:
+  Code: def train(train_dir, model_save_path=None, n_neighbors=None, knn_algo='ball_tree', verbose=False):  ...
+  Documentation: Trains a k-nearest neighbors classifier for face recognition. :param train_dir: directory that conta...
+
+Training Record 2:
+  Code: def predict(X_img_path, knn_clf=None, model_path=None, distance_threshold=0.6):  if not os.path.isfi...
+  Documentation: Recognizes faces in given image using a trained KNN classifier :param X_img_path: path to image to b...
+
+Training Record 3:
+  Code: def show_prediction_labels_on_image(img_path, predictions):  pil_image = Image.open(img_path).conver...
+  Documentation: Shows the face recognition results visually. :param img_path: path to image to be recognized :param ...
+
+SAMPLE VALIDATION RECORDS:
+----------------------------------------
+Validation Record 1:
+  Code: def nature_cnn(unscaled_images, **conv_kwargs): """ CNN from Nature paper. """ scaled_images = tf.ca...
+  Documentation: CNN from Nature paper.
+
+Validation Record 2:
+  Code: def mlp(num_layers=2, num_hidden=64, activation=tf.tanh, layer_norm=False): """ Stack of fully-conne...
+  Documentation: Stack of fully-connected layers to be used in a policy / q-function approximator Parameters: -------...
+
+Validation Record 3:
+  Code: def lstm(nlstm=128, layer_norm=False): """ Builds LSTM (Long-Short Term Memory) network to be used i...
+  Documentation: Builds LSTM (Long-Short Term Memory) network to be used in a policy. Note that the resulting functio...
+
+TOKENIZATION STATISTICS:
+----------------------------------------
+Training - Average text length: 783.5 characters
+Training - Min/Max text length: 305/1779 characters
+Validation - Average text length: 971.4 characters
+Validation - Min/Max text length: 203/2102 characters
+
+Starting training in 3 seconds...
+============================================================
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+        - Avoid using `tokenizers` before the fork if possible
+        - Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+No checkpoint found, starting fresh training
+  0%|                                                                                                                                                                                             | 0/5000 [00:00<?, ?it/s]`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+/home/Projects/Qwen-FinalFineTuning/venv/lib/python3.8/site-packages/torch/_dynamo/eval_frame.py:600: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+/home/Projects/Qwen-FinalFineTuning/venv/lib/python3.8/site-packages/bitsandbytes/autograd/_functions.py:315: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+/home/Projects/Qwen-FinalFineTuning/venv/lib/python3.8/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+{'loss': 1.935, 'grad_norm': 0.3896528482437134, 'learning_rate': 9.900000000000001e-05, 'epoch': 0.02}                                                                                                                    
+{'loss': 1.775, 'grad_norm': 0.26806414127349854, 'learning_rate': 9.8e-05, 'epoch': 0.04}                                                                                                                                 
+{'loss': 1.6829, 'grad_norm': 0.23426155745983124, 'learning_rate': 9.7e-05, 'epoch': 0.06}                                                                                                                                
+{'loss': 1.6511, 'grad_norm': 0.3326117694377899, 'learning_rate': 9.6e-05, 'epoch': 0.08}                                                                                                                                 
+{'loss': 1.634, 'grad_norm': 0.5118780136108398, 'learning_rate': 9.5e-05, 'epoch': 0.1}                                                                                                                                   
+{'loss': 1.6581, 'grad_norm': 0.3450826406478882, 'learning_rate': 9.4e-05, 'epoch': 0.12}                                                                                                                                 
+{'loss': 1.6472, 'grad_norm': 0.36338844895362854, 'learning_rate': 9.300000000000001e-05, 'epoch': 0.14}                                                                                                                  
+{'loss': 1.622, 'grad_norm': 0.6244141459465027, 'learning_rate': 9.200000000000001e-05, 'epoch': 0.16}                                                                                                                    
+{'loss': 1.606, 'grad_norm': 0.31276935338974, 'learning_rate': 9.1e-05, 'epoch': 0.18}                                                                                                                                    
+{'loss': 1.575, 'grad_norm': 0.3410581052303314, 'learning_rate': 9e-05, 'epoch': 0.2}                                                                                                                                     
+{'loss': 1.5841, 'grad_norm': 0.27266809344291687, 'learning_rate': 8.900000000000001e-05, 'epoch': 0.22}                                                                                                                  
+{'loss': 1.5965, 'grad_norm': 0.37260785698890686, 'learning_rate': 8.800000000000001e-05, 'epoch': 0.24}                                                                                                                  
+{'loss': 1.6444, 'grad_norm': 0.33071979880332947, 'learning_rate': 8.7e-05, 'epoch': 0.26}                                                                                                                                
+{'loss': 1.6031, 'grad_norm': 0.27603232860565186, 'learning_rate': 8.6e-05, 'epoch': 0.28}                                                                                                                                
+{'loss': 1.5738, 'grad_norm': 0.3100574016571045, 'learning_rate': 8.5e-05, 'epoch': 0.3}                                                                                                                                  
+{'loss': 1.5861, 'grad_norm': 0.37397491931915283, 'learning_rate': 8.4e-05, 'epoch': 0.32}                                                                                                                                
+{'loss': 1.6332, 'grad_norm': 0.44055503606796265, 'learning_rate': 8.3e-05, 'epoch': 0.34}                                                                                                                                
+{'loss': 1.5718, 'grad_norm': 0.3777046501636505, 'learning_rate': 8.2e-05, 'epoch': 0.36}                                                                                                                                 
+{'loss': 1.5613, 'grad_norm': 0.42664551734924316, 'learning_rate': 8.1e-05, 'epoch': 0.38}                                                                                                                                
+{'loss': 1.6027, 'grad_norm': 0.3778568208217621, 'learning_rate': 8e-05, 'epoch': 0.4}                                                                                                                                    
+{'eval_loss': 1.4776699542999268, 'eval_runtime': 45.562, 'eval_samples_per_second': 21.948, 'eval_steps_per_second': 5.487, 'epoch': 0.4}                                                                                 
+ 20%|███████████████████████████████████▌                                                                                                                                              | 1000/5000 [10:03<37:36,  1.77it/s/home/Projects/Qwen-FinalFineTuning/venv/lib/python3.8/site-packages/torch/_dynamo/eval_frame.py:600: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+/home/Projects/Qwen-FinalFineTuning/venv/lib/python3.8/site-packages/bitsandbytes/autograd/_functions.py:315: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+/home/Projects/Qwen-FinalFineTuning/venv/lib/python3.8/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+{'loss': 1.5864, 'grad_norm': 0.4334787428379059, 'learning_rate': 7.900000000000001e-05, 'epoch': 0.42}                                                                                                                   
+{'loss': 1.5981, 'grad_norm': 0.3536428213119507, 'learning_rate': 7.800000000000001e-05, 'epoch': 0.44}                                                                                                                   
+{'loss': 1.5713, 'grad_norm': 0.31985753774642944, 'learning_rate': 7.7e-05, 'epoch': 0.46}                                                                                                                                
+{'loss': 1.5038, 'grad_norm': 0.4566281735897064, 'learning_rate': 7.6e-05, 'epoch': 0.48}                                                                                                                                 
+{'loss': 1.5314, 'grad_norm': 0.28979378938674927, 'learning_rate': 7.500000000000001e-05, 'epoch': 0.5}                                                                                                                   
+{'loss': 1.5639, 'grad_norm': 0.5299533009529114, 'learning_rate': 7.4e-05, 'epoch': 0.52}                                                                                                                                 
+{'loss': 1.6609, 'grad_norm': 0.385982871055603, 'learning_rate': 7.3e-05, 'epoch': 0.54}                                                                                                                                  
+{'loss': 1.5389, 'grad_norm': 0.3186081349849701, 'learning_rate': 7.2e-05, 'epoch': 0.56}                                                                                                                                 
+{'loss': 1.5755, 'grad_norm': 0.44903799891471863, 'learning_rate': 7.1e-05, 'epoch': 0.58}                                                                                                                                
+{'loss': 1.5828, 'grad_norm': 0.3109701871871948, 'learning_rate': 7e-05, 'epoch': 0.6}                                                                                                                                    
+{'loss': 1.5503, 'grad_norm': 0.45753955841064453, 'learning_rate': 6.9e-05, 'epoch': 0.62}                                                                                                                                
+{'loss': 1.5846, 'grad_norm': 0.5077839493751526, 'learning_rate': 6.800000000000001e-05, 'epoch': 0.64}                                                                                                                   
+{'loss': 1.5949, 'grad_norm': 0.4084586203098297, 'learning_rate': 6.7e-05, 'epoch': 0.66}                                                                                                                                 
+{'loss': 1.6039, 'grad_norm': 0.3130470812320709, 'learning_rate': 6.6e-05, 'epoch': 0.68}                                                                                                                                 
+{'loss': 1.5616, 'grad_norm': 0.3127152621746063, 'learning_rate': 6.500000000000001e-05, 'epoch': 0.7}                                                                                                                    
+{'loss': 1.5332, 'grad_norm': 0.4261070191860199, 'learning_rate': 6.400000000000001e-05, 'epoch': 0.72}                                                                                                                   
+{'loss': 1.605, 'grad_norm': 0.39974164962768555, 'learning_rate': 6.3e-05, 'epoch': 0.74}                                                                                                                                 
+{'loss': 1.5522, 'grad_norm': 0.3793664276599884, 'learning_rate': 6.2e-05, 'epoch': 0.76}                                                                                                                                 
+{'loss': 1.5571, 'grad_norm': 0.4125880300998688, 'learning_rate': 6.1e-05, 'epoch': 0.78}                                                                                                                                 
+{'loss': 1.5746, 'grad_norm': 0.4851904511451721, 'learning_rate': 6e-05, 'epoch': 0.8}                                                                                                                                    
+{'eval_loss': 1.4750481843948364, 'eval_runtime': 44.733, 'eval_samples_per_second': 22.355, 'eval_steps_per_second': 5.589, 'epoch': 0.8}                                                                                 
+ 40%|███████████████████████████████████████████████████████████████████████▏                                                                                                          | 2000/5000 [20:09<27:46,  1.80it/s/home/Projects/Qwen-FinalFineTuning/venv/lib/python3.8/site-packages/torch/_dynamo/eval_frame.py:600: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+/home/Projects/Qwen-FinalFineTuning/venv/lib/python3.8/site-packages/bitsandbytes/autograd/_functions.py:315: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+/home/Projects/Qwen-FinalFineTuning/venv/lib/python3.8/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+{'loss': 1.5222, 'grad_norm': 0.3799767792224884, 'learning_rate': 5.9e-05, 'epoch': 0.82}                                                                                                                                 
+{'loss': 1.5624, 'grad_norm': 0.38569334149360657, 'learning_rate': 5.8e-05, 'epoch': 0.84}                                                                                                                                
+{'loss': 1.5634, 'grad_norm': 0.3830331563949585, 'learning_rate': 5.6999999999999996e-05, 'epoch': 0.86}                                                                                                                  
+{'loss': 1.5376, 'grad_norm': 0.3650161325931549, 'learning_rate': 5.6000000000000006e-05, 'epoch': 0.88}                                                                                                                  
+{'loss': 1.5486, 'grad_norm': 0.34152257442474365, 'learning_rate': 5.500000000000001e-05, 'epoch': 0.9}                                                                                                                   
+{'loss': 1.5595, 'grad_norm': 0.49213191866874695, 'learning_rate': 5.4000000000000005e-05, 'epoch': 0.92}                                                                                                                 
+{'loss': 1.5892, 'grad_norm': 0.5040835738182068, 'learning_rate': 5.300000000000001e-05, 'epoch': 0.94}                                                                                                                   
+{'loss': 1.4803, 'grad_norm': 0.4607410430908203, 'learning_rate': 5.2000000000000004e-05, 'epoch': 0.96}                                                                                                                  
+{'loss': 1.559, 'grad_norm': 0.3400561213493347, 'learning_rate': 5.1000000000000006e-05, 'epoch': 0.98}                                                                                                                   
+{'loss': 1.6133, 'grad_norm': 0.3354465961456299, 'learning_rate': 5e-05, 'epoch': 1.0}                                                                                                                                    
+{'loss': 1.5943, 'grad_norm': 0.4695442020893097, 'learning_rate': 4.9e-05, 'epoch': 1.02}                                                                                                                                 
+{'loss': 1.5599, 'grad_norm': 0.37004002928733826, 'learning_rate': 4.8e-05, 'epoch': 1.04}                                                                                                                                
+{'loss': 1.5508, 'grad_norm': 0.44595617055892944, 'learning_rate': 4.7e-05, 'epoch': 1.06}                                                                                                                                
+{'loss': 1.5292, 'grad_norm': 0.3762313425540924, 'learning_rate': 4.600000000000001e-05, 'epoch': 1.08}                                                                                                                   
+{'loss': 1.5618, 'grad_norm': 0.5350185036659241, 'learning_rate': 4.5e-05, 'epoch': 1.1}                                                                                                                                  
+{'loss': 1.5195, 'grad_norm': 0.5226247906684875, 'learning_rate': 4.4000000000000006e-05, 'epoch': 1.12}                                                                                                                  
+{'loss': 1.5821, 'grad_norm': 0.3570551574230194, 'learning_rate': 4.3e-05, 'epoch': 1.14}                                                                                                                                 
+{'loss': 1.4892, 'grad_norm': 0.4160563349723816, 'learning_rate': 4.2e-05, 'epoch': 1.16}                                                                                                                                 
+{'loss': 1.5743, 'grad_norm': 0.41422754526138306, 'learning_rate': 4.1e-05, 'epoch': 1.18}                                                                                                                                
+{'loss': 1.5538, 'grad_norm': 0.4506118595600128, 'learning_rate': 4e-05, 'epoch': 1.2}                                                                                                                                    
+{'eval_loss': 1.4696179628372192, 'eval_runtime': 44.5415, 'eval_samples_per_second': 22.451, 'eval_steps_per_second': 5.613, 'epoch': 1.2}                                                                                
+ 60%|██████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                                                       | 3000/5000 [30:06<18:46,  1.78it/s/home/Projects/Qwen-FinalFineTuning/venv/lib/python3.8/site-packages/torch/_dynamo/eval_frame.py:600: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+/home/Projects/Qwen-FinalFineTuning/venv/lib/python3.8/site-packages/bitsandbytes/autograd/_functions.py:315: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+/home/Projects/Qwen-FinalFineTuning/venv/lib/python3.8/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+{'loss': 1.54, 'grad_norm': 0.44670045375823975, 'learning_rate': 3.9000000000000006e-05, 'epoch': 1.22}                                                                                                                   
+{'loss': 1.545, 'grad_norm': 0.5833995342254639, 'learning_rate': 3.8e-05, 'epoch': 1.24}                                                                                                                                  
+{'loss': 1.589, 'grad_norm': 0.40760236978530884, 'learning_rate': 3.7e-05, 'epoch': 1.26}                                                                                                                                 
+{'loss': 1.4892, 'grad_norm': 0.30110883712768555, 'learning_rate': 3.6e-05, 'epoch': 1.28}                                                                                                                                
+{'loss': 1.6077, 'grad_norm': 0.481529176235199, 'learning_rate': 3.5e-05, 'epoch': 1.3}                                                                                                                                   
+{'loss': 1.5472, 'grad_norm': 0.41819635033607483, 'learning_rate': 3.4000000000000007e-05, 'epoch': 1.32}                                                                                                                 
+{'loss': 1.5663, 'grad_norm': 0.4975380301475525, 'learning_rate': 3.3e-05, 'epoch': 1.34}                                                                                                                                 
+{'loss': 1.5838, 'grad_norm': 0.42573070526123047, 'learning_rate': 3.2000000000000005e-05, 'epoch': 1.36}                                                                                                                 
+{'loss': 1.4981, 'grad_norm': 0.46416372060775757, 'learning_rate': 3.1e-05, 'epoch': 1.38}                                                                                                                                
+{'loss': 1.5668, 'grad_norm': 0.3850506842136383, 'learning_rate': 3e-05, 'epoch': 1.4}                                                                                                                                    
+{'loss': 1.5415, 'grad_norm': 0.41908952593803406, 'learning_rate': 2.9e-05, 'epoch': 1.42}                                                                                                                                
+{'loss': 1.5083, 'grad_norm': 0.3359043300151825, 'learning_rate': 2.8000000000000003e-05, 'epoch': 1.44}                                                                                                                  
+{'loss': 1.585, 'grad_norm': 0.42603299021720886, 'learning_rate': 2.7000000000000002e-05, 'epoch': 1.46}                                                                                                                  
+{'loss': 1.534, 'grad_norm': 0.4140830934047699, 'learning_rate': 2.6000000000000002e-05, 'epoch': 1.48}                                                                                                                   
+{'loss': 1.5842, 'grad_norm': 0.46406498551368713, 'learning_rate': 2.5e-05, 'epoch': 1.5}                                                                                                                                 
+{'loss': 1.5786, 'grad_norm': 0.4253408908843994, 'learning_rate': 2.4e-05, 'epoch': 1.52}                                                                                                                                 
+{'loss': 1.5005, 'grad_norm': 0.5154560208320618, 'learning_rate': 2.3000000000000003e-05, 'epoch': 1.54}                                                                                                                  
+{'loss': 1.5618, 'grad_norm': 0.39663562178611755, 'learning_rate': 2.2000000000000003e-05, 'epoch': 1.56}                                                                                                                 
+{'loss': 1.5416, 'grad_norm': 0.4807283878326416, 'learning_rate': 2.1e-05, 'epoch': 1.58}                                                                                                                                 
+{'loss': 1.5411, 'grad_norm': 0.435920774936676, 'learning_rate': 2e-05, 'epoch': 1.6}                                                                                                                                     
+{'eval_loss': 1.468679428100586, 'eval_runtime': 44.7673, 'eval_samples_per_second': 22.338, 'eval_steps_per_second': 5.584, 'epoch': 1.6}                                                                                 
+ 80%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                   | 4000/5000 [40:06<09:16,  1.80it/s/home/Projects/Qwen-FinalFineTuning/venv/lib/python3.8/site-packages/torch/_dynamo/eval_frame.py:600: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+/home/Projects/Qwen-FinalFineTuning/venv/lib/python3.8/site-packages/bitsandbytes/autograd/_functions.py:315: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+/home/Projects/Qwen-FinalFineTuning/venv/lib/python3.8/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+{'loss': 1.5262, 'grad_norm': 0.4877327084541321, 'learning_rate': 1.9e-05, 'epoch': 1.62}                                                                                                                                 
+{'loss': 1.5378, 'grad_norm': 0.3555874228477478, 'learning_rate': 1.8e-05, 'epoch': 1.64}                                                                                                                                 
+{'loss': 1.5487, 'grad_norm': 0.3661811649799347, 'learning_rate': 1.7000000000000003e-05, 'epoch': 1.66}                                                                                                                  
+{'loss': 1.5637, 'grad_norm': 0.4528806805610657, 'learning_rate': 1.6000000000000003e-05, 'epoch': 1.68}                                                                                                                  
+{'loss': 1.5139, 'grad_norm': 0.4286579489707947, 'learning_rate': 1.5e-05, 'epoch': 1.7}                                                                                                                                  
+{'loss': 1.5116, 'grad_norm': 0.47477787733078003, 'learning_rate': 1.4000000000000001e-05, 'epoch': 1.72}                                                                                                                 
+{'loss': 1.5737, 'grad_norm': 0.5722760558128357, 'learning_rate': 1.3000000000000001e-05, 'epoch': 1.74}                                                                                                                  
+{'loss': 1.4779, 'grad_norm': 0.4691771864891052, 'learning_rate': 1.2e-05, 'epoch': 1.76}                                                                                                                                 
+{'loss': 1.5247, 'grad_norm': 0.45235446095466614, 'learning_rate': 1.1000000000000001e-05, 'epoch': 1.78}                                                                                                                 
+{'loss': 1.5338, 'grad_norm': 0.49387115240097046, 'learning_rate': 1e-05, 'epoch': 1.8}                                                                                                                                   
+{'loss': 1.5543, 'grad_norm': 0.6349605917930603, 'learning_rate': 9.02e-06, 'epoch': 1.82}                                                                                                                                
+{'loss': 1.5327, 'grad_norm': 0.44465699791908264, 'learning_rate': 8.02e-06, 'epoch': 1.84}                                                                                                                               
+{'loss': 1.5436, 'grad_norm': 0.5361409187316895, 'learning_rate': 7.0200000000000006e-06, 'epoch': 1.86}                                                                                                                  
+{'loss': 1.5418, 'grad_norm': 0.4374682605266571, 'learning_rate': 6.02e-06, 'epoch': 1.88}                                                                                                                                
+{'loss': 1.5761, 'grad_norm': 0.43342891335487366, 'learning_rate': 5.02e-06, 'epoch': 1.9}                                                                                                                                
+{'loss': 1.498, 'grad_norm': 0.4320487380027771, 'learning_rate': 4.0200000000000005e-06, 'epoch': 1.92}                                                                                                                   
+{'loss': 1.6044, 'grad_norm': 0.42486220598220825, 'learning_rate': 3.0200000000000003e-06, 'epoch': 1.94}                                                                                                                 
+{'loss': 1.5244, 'grad_norm': 0.359311044216156, 'learning_rate': 2.02e-06, 'epoch': 1.96}                                                                                                                                 
+{'loss': 1.5482, 'grad_norm': 0.6239638328552246, 'learning_rate': 1.0200000000000002e-06, 'epoch': 1.98}                                                                                                                  
+{'loss': 1.5575, 'grad_norm': 0.31988272070884705, 'learning_rate': 2e-08, 'epoch': 2.0}                                                                                                                                   
+{'eval_loss': 1.468776822090149, 'eval_runtime': 44.6324, 'eval_samples_per_second': 22.405, 'eval_steps_per_second': 5.601, 'epoch': 2.0}                                                                                 
+{'train_runtime': 3055.9421, 'train_samples_per_second': 6.545, 'train_steps_per_second': 1.636, 'train_loss': 1.5702696350097656, 'epoch': 2.0}                                                                           
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5000/5000 [50:55<00:00,  1.64it/s]
