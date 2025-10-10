@@ -13,18 +13,23 @@ checkpoints/
 **/checkpoints/
 **/checkpoint-*/
 data/
+datasets/
+#models/
+results/
 evaluation_results/
+logs/
+optuna_qlora.db
 
 # Large dataset files
-*.safetensors
+# *.safetensors
 *.bin
 *.pt
 *.pth
 
 # Large tokenizer files (>1MB)
-tokenizer.json
-vocab.json
-merges.txt
+#tokenizer.json
+#vocab.json
+#merges.txt
 
 # Training state files
 trainer_state.json
