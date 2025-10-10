@@ -2,7 +2,7 @@
 
 > **A comprehensive machine learning pipeline for generating and improving API documentation using state-of-the-art language models.**
 
-This repository contains a complete pipeline for automated API documentation generation, paraphrasing, and enhancement using various pre-trained and fine-tuned language models including SmolLM2, Qwen2.5-Coder, and T5.
+This repository contains a complete pipeline for automated API documentation generation, paraphrasing, and enhancement using various pre-trained and fine-tuned language models including SmolLM2, Qwen2.5-Coder, T5, and more.
 
 ## 🎯 Project Overview
 
@@ -68,129 +68,73 @@ python full_training_pipeline.py
 ## 🗂️ Project Structure
 
 ```
-APIDocumentation/
-├── 📁 datasets/                      # Training and evaluation datasets
-│   ├── ds-1000/                     # DS-1000 dataset for data science
-│   ├── mbpp/                        # Mostly Basic Python Programming dataset  
-│   ├── final/                       # Processed final training datasets
-│   ├── tapaco/                      # Paraphrasing dataset
-│   └── website/                     # Crawled website content
-├── 📁 training/                      # Training scripts and models
-│   ├── api_documentation/           # Code documentation training
-│   └── website_crawler/             # Web crawling and Q&A training
-├── 📄 full_training_pipeline.py     # Main pipeline orchestrator
-├── 📄 quick_start_pipeline.py       # Quick testing pipeline
-├── 📄 pipeline_config.json          # Configuration file
-├── 📄 requirements_pipeline.txt     # Python dependencies
-├── 📄 train_t5_model_paraphrase.py  # T5 paraphrasing model training
-├── 📄 rephrasing_test*.py           # Paraphrasing experiments
-└── 📄 script_fix_dataset*.py        # Dataset processing utilities
+APIDocumentation_Workbench/
+├── config/                  # YAML and pipeline configs
+├── data/                    # Raw and processed datasets
+├── datasets/                # External and custom datasets
+├── models/                  # Model checkpoints and cards
+├── results/                 # Output results
+├── evaluation_results/      # Evaluation metrics and tables
+├── logs/                    # Training and experiment logs
+├── scripts/
+│   ├── training/            # Training scripts
+│   ├── evaluation/          # Evaluation scripts
+│   ├── util/                # Utilities and helpers
+│   ├── dataset/             # Dataset extraction/fixing
+│   ├── test/                # Model testing scripts
+│   ├── inference/           # Inference utilities
+│   └── snippets/            # Miscellaneous code snippets
+├── full_training_pipeline.py # Main pipeline orchestrator
+├── quick_start_pipeline.py   # Quick testing pipeline
+├── requirements.txt          # Python dependencies
+├── python-env.yml            # Conda environment file
+└── ...
 ```
 
 ## 🔧 Configuration
 
-### Pipeline Configuration (`pipeline_config.json`)
-
-```json
-{
-    "crawling": {
-        "start_url": "https://your-documentation-site.com",
-        "max_pages": 50,
-        "delay_seconds": 1
-    },
-    "training": {
-        "model_name": "HuggingFaceTB/SmolLM2-360M-Instruct",
-        "num_train_epochs": 3,
-        "per_device_train_batch_size": 2,
-        "max_length": 512
-    },
-    "generation": {
-        "max_new_tokens": 150,
-        "temperature": 0.7,
-        "top_p": 0.9
-    }
-}
-```
-
-### Model Selection
-
-The project supports multiple base models:
-
-- **SmolLM2-360M-Instruct** - Lightweight, fast inference
-- **Qwen2.5-Coder-0.5B-Instruct** - Specialized for code understanding
-- **T5 variants** - For paraphrasing and text transformation
+- All config files are in `config/`
+- Document the purpose of each config file in the README
+- Example: `axolotl_config.yaml` for Axolotl training
 
 ## 🎯 Usage Examples
 
-### 1. Website Documentation Q&A
+### Website Documentation Q&A
 
 ```python
-from full_training_pipeline import WebCrawler, DataProcessor, ModelTrainer, QASystem
-
-# Crawl documentation website
-crawler = WebCrawler(max_pages=20)
-pages = crawler.crawl_website("https://your-docs.com")
-
-# Generate Q&A pairs
-processor = DataProcessor()
-qa_pairs = processor.generate_qa_pairs(pages)
-
-# Train model
-trainer = ModelTrainer()
-dataset = trainer.prepare_training_data(qa_pairs)
-model_path = trainer.train_model(dataset, "./custom_qa_model")
-
-# Use the trained model
-qa_system = QASystem(model_path)
-answer = qa_system.ask_question("How do I configure the API?")
+from scripts.full_training_pipeline import WebCrawler, DataProcessor, ModelTrainer, QASystem
+# ...existing code...
 ```
 
-### 2. Code Documentation Generation
+### Code Documentation Generation
 
 ```python
-from training.api_documentation.training import train_documentation_model
-
-# Train on your code dataset
-model_path = train_documentation_model(
-    dataset_path="./datasets/final/final_dataset.json",
-    model_name="Qwen/Qwen2.5-Coder-0.5B-Instruct",
-    output_dir="./my_code_docs_model"
-)
-
-# Generate documentation
-code = "def fibonacci(n): return n if n <= 1 else fibonacci(n-1) + fibonacci(n-2)"
-documentation = generate_docs(code, model_path)
+from scripts.training.training import train_documentation_model
+# ...existing code...
 ```
 
-### 3. Text Paraphrasing & Enhancement
+### Text Paraphrasing & Enhancement
 
 ```python
 from transformers import pipeline
-
-# Load paraphrasing pipeline
-paraphraser = pipeline("text2text-generation", model="Vamsi/T5_Paraphrase_Paws")
-
-# Paraphrase documentation
-original = "Write a function that takes a string and returns it in uppercase."
-paraphrased = paraphraser(f"Paraphrase: {original}", max_length=64)
+# ...existing code...
 ```
 
 ## 📊 Datasets
 
-### Built-in Datasets
+**Available Datasets:**
+- **DS-1000**: 1000 data science programming problems (`datasets/ds-1000/`)
+- **MBPP**: Mostly Basic Python Programming problems (`datasets/mbpp/`)
+- **TAPACO**: Paraphrasing dataset with 73,000+ pairs (`datasets/tapaco/`)
+- **Custom Documentation**: Extracted from various API documentation sites (`datasets/website/`)
+- **Synthetic & Real Datasets**: Located in `data/` and `datasets/`
 
-- **DS-1000**: 1000 data science programming problems
-- **MBPP**: Mostly Basic Python Programming problems
-- **TAPACO**: Paraphrasing dataset with 73,000+ pairs
-- **Custom Documentation**: Extracted from various API documentation sites
-
-### Dataset Formats
-
+### Dataset Format
 All datasets follow a consistent JSON structure:
 ```json
 {
-  "code": "def example_function(x): return x * 2",
-  "documentation": "This function multiplies the input by 2 and returns the result"
+    "code": "def example_function(x): return x * 2",
+    "documentation": "This function multiplies the input by 2 and returns the result"
 }
 ```
 
@@ -205,16 +149,17 @@ The repository includes several experimental scripts:
 
 ## 🏋️ Training Details
 
-### Code Documentation Models
-- **Architecture**: Transformer-based language models with LoRA adapters
-- **Training**: Instruction tuning format with supervised fine-tuning
-- **Optimization**: AdamW with cosine learning rate scheduling
-- **Evaluation**: BLEU and METEOR metrics for generation quality
+## 🏋️ Training & Evaluation
 
-### Paraphrasing Models
-- **Base Models**: T5-small, T5-base, T5-large variants
-- **Task**: Sequence-to-sequence text transformation
-- **Specialized**: Imperative-to-declarative style conversion
+- Train models with scripts in `scripts/training/`
+- Evaluate with `scripts/evaluation/model_evaluation.py`
+- Results saved in `evaluation_results/`
+
+## 🧠 Models
+
+- Model checkpoints in `models/`
+- Model cards and tokenizer files in each model directory
+- Supported models: SmolLM2, Qwen2.5-Coder, T5 variants, and more
 
 ## 🎛️ Advanced Configuration
 
@@ -246,32 +191,21 @@ generation_config = {
 
 ## 📈 Performance & Benchmarks
 
-- **Training Speed**: ~2-3 hours on RTX 4090 for full training
-- **Memory Usage**: 6-8GB GPU memory for inference
-- **Generation Quality**: BLEU scores of 0.65+ on test sets
-- **Supported Languages**: Python, JavaScript, Java, C++, and more
+- Training Speed: ~2-3 hours on RTX 4090 for full training
+- Memory Usage: 6-8GB GPU memory for inference
+- Generation Quality: BLEU scores of 0.65+ on test sets
+- Supported Languages: Python, JavaScript, Java, C++, and more
 
 ## 🛠️ Troubleshooting
 
 ### Common Issues
 
 1. **CUDA Out of Memory**
-   ```bash
-   # Reduce batch size in config
-   "per_device_train_batch_size": 1
-   ```
-
+    - Reduce batch size in config
 2. **Model Loading Errors**
-   ```bash
-   # Clear transformers cache
-   rm -rf ~/.cache/huggingface/
-   ```
-
+    - Clear transformers cache
 3. **Website Crawling Issues**
-   ```python
-   # Check robots.txt and add delays
-   "delay_seconds": 2
-   ```
+    - Check robots.txt and add delays
 
 ## 🤝 Contributing
 
@@ -308,7 +242,5 @@ If you use this work in your research, please cite:
 ```
 
 ---
-
-**⭐ If this project helps you, please star it on GitHub!**
 
 For questions and support, please open an issue or reach out via the discussions tab.
