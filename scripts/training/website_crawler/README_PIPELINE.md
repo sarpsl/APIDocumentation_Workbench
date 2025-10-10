@@ -4,9 +4,10 @@ This pipeline crawls a website, processes the content, and trains a custom Q&A m
 
 ## 🚀 Quick Start
 
+
 1. **Install dependencies:**
 ```bash
-pip install -r requirements_pipeline.txt
+pip install -r requirements.txt
 ```
 
 2. **Run quick test (5 pages, minimal training):**
@@ -57,16 +58,18 @@ Edit `pipeline_config.json` to customize:
 
 ## 📁 File Structure
 
+
 ```
-├── full_training_pipeline.py      # Main pipeline
-├── quick_start_pipeline.py        # Quick test version
-├── pipeline_config.json           # Configuration
-├── requirements_pipeline.txt      # Dependencies
+website_crawler/
+├── full_training_pipeline.py      # Main pipeline for crawling, Q&A generation, and training
+├── quick_start_pipeline.py        # Quick test version (minimal crawl and training)
+├── pipeline_config.json           # Configuration for crawling, training, and generation
+├── requirements_pipeline.txt      # Python dependencies for this pipeline
 ├── datasets/
 │   └── website/
-│       ├── crawled_pages.json     # Raw crawled data
-│       └── qa_pairs.json          # Generated Q&A pairs
-└── fine_tuned_qa_model/           # Trained model output
+│       ├── crawled_pages.json     # Raw crawled website data
+│       └── qa_pairs.json          # Generated Q&A pairs from crawled data
+└── README_PIPELINE.md             # This documentation file
 ```
 
 ## 🛠️ Customization
