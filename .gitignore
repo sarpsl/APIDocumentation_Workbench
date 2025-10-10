@@ -9,7 +9,11 @@ runs/
 **/logs/
 **/wandb/
 checkpoint-*/
+checkpoints/
+**/checkpoints/
 **/checkpoint-*/
+data/
+evaluation_results/
 
 # Large dataset files
 *.safetensors

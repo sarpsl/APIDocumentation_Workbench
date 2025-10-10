@@ -17,6 +17,7 @@ import json
 import torch
 import pandas as pd
 import numpy as np
+import shutil
 from transformers import (
     AutoTokenizer, 
     AutoModelForCausalLM, 
@@ -181,6 +182,19 @@ Documentation:"""
     # Output
     RESULTS_DIR = "evaluation_results"
     RESULTS_FILE = "model_evaluation_results.csv"
+
+def clear_huggingface_cache():
+    """Delete Hugging Face cache directory to free disk space."""
+    cache_dir = os.environ.get("TRANSFORMERS_CACHE", os.path.expanduser("~/.cache/huggingface/hub"))
+    if os.path.exists(cache_dir):
+        print(f"Clearing Hugging Face cache at {cache_dir}...")
+        try:
+            shutil.rmtree(cache_dir)
+            print("✓ Cache cleared.")
+        except Exception as e:
+            print(f"✗ Failed to clear cache: {e}")
+    else:
+        print("No Hugging Face cache found to clear.")
 
 
 # ============================================================================
@@ -447,6 +461,9 @@ def evaluate_model(model_name, model_config, test_data):
     
     # Unload model
     evaluator.unload_model()
+	
+	# Clear cache after unloading model
+    #clear_huggingface_cache()
     
     # Compile results
     results = {

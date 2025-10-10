@@ -1,0 +1,44 @@
+# Axolotl QLoRA finetuning config for SmolLM2-1.7B-Instruct
+# See: https://github.com/OpenAccess-AI-Collective/axolotl for full options
+
+base_model: HuggingFaceTB/SmolLM2-1.7B-Instruct
+
+# Data paths (exported by your script)
+datasets:
+  - path: data/train_cleaned_declarative.jsonl
+    type: jsonl
+    field_map:
+      input: code
+      output: doc
+    validation_path: data/validation_cleaned_declarative.jsonl
+
+# QLoRA settings
+adapter: qlora
+lora_r: 8
+lora_alpha: 16
+lora_dropout: 0.05
+
+# Training
+epochs: 2
+train_batch_size: 4
+eval_batch_size: 4
+learning_rate: 2e-4
+max_seq_length: 512
+
+# Output
+output_dir: models/finetuned
+save_total_limit: 1
+save_strategy: epoch
+evaluation_strategy: epoch
+
+# Logging
+logging_steps: 10
+report_to: none
+
+# Hardware
+load_in_8bit: true
+bf16: true
+fp16: false
+
+# Misc
+seed: 42

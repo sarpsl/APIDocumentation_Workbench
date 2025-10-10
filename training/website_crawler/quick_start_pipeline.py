@@ -11,7 +11,7 @@ import sys
 # Add current directory to path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-from full_training_pipeline import WebCrawler, DataProcessor, ModelTrainer, QASystem
+from scripts.full_training_pipeline import WebCrawler, DataProcessor, ModelTrainer, QASystem
 import json
 
 def quick_start():

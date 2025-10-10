@@ -27,9 +27,9 @@ dataset = dataset.train_test_split(test_size=0.1)
 
 # ==== Step 2: Load tokenizer and model ====
 # Use the original Qwen2.5-Coder model (not GGUF version)
-# model_name = "Qwen/Qwen2.5-Coder-0.5B-Instruct"
+model_name = "Qwen/Qwen2.5-Coder-0.5B-Instruct"
 # Alternative smaller models if needed:
-model_name = "HuggingFaceTB/SmolLM2-360M-Instruct"
+# model_name = "HuggingFaceTB/SmolLM2-360M-Instruct"
 # model_name = "microsoft/DialoGPT-small"
 
 bnb_config = BitsAndBytesConfig(
